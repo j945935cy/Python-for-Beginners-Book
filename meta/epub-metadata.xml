@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata>
+    <dc:title>Python 程式設計入門：從 0 到 Function</dc:title>
+    <dc:language>zh-TW</dc:language>
+    <dc:creator>J5</dc:creator>
+    <dc:identifier>python-for-beginners-book</dc:identifier>
+    <dc:publisher>自出版</dc:publisher>
+    <dc:rights>All rights reserved.</dc:rights>
+    <dc:description>一本給初學者的 Python 入門教材。</dc:description>
+  </metadata>
+</package>

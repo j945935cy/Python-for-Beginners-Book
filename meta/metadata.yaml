@@ -1,0 +1,11 @@
+title: "Python 程式設計入門：從 0 到 Function"
+author:
+  - "J5"
+language: "zh-TW"
+rights: "All rights reserved."
+description: "一本給初學者的 Python 入門教材，內容涵蓋基礎語法到 Function。"
+publisher: "自出版"
+identifier: "python-for-beginners-book"
+cover-image: "meta/cover.png"
+toc: true
+toc-depth: 2

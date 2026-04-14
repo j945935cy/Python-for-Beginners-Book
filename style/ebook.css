@@ -1,0 +1,17 @@
+body {
+  font-family: serif;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+code {
+  font-family: monospace;
+}

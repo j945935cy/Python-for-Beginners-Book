@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build outputs
+output/html/*
+output/epub/*
+!output/html/.gitkeep
+!output/epub/.gitkeep
+
+# Temporary files
+*.tmp
+*.log

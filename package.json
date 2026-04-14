@@ -1,0 +1,12 @@
+{
+  "name": "python-for-beginners-book",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A beginner-friendly Python book project with Markdown, HTML, and EPUB outputs.",
+  "scripts": {
+    "build:html": "powershell -ExecutionPolicy Bypass -File ./scripts/build-html.ps1",
+    "build:epub": "powershell -ExecutionPolicy Bypass -File ./scripts/build-epub.ps1",
+    "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-all.ps1",
+    "serve": "powershell -ExecutionPolicy Bypass -File ./scripts/serve.ps1"
+  }
+}
