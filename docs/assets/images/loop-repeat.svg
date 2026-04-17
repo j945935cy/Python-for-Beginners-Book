@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">迴圈重複執行示意圖</title>
+  <desc id="desc">顯示一段程式在迴圈中重複執行，直到次數用完或條件不成立為止。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .center { fill: #ffffff; stroke: #60a5fa; stroke-width: 4; rx: 28; ry: 28; }
+      .bubble { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 3; rx: 18; ry: 18; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 20px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .line { stroke: #2563eb; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="320" rx="28" ry="28"/>
+  <text class="title" x="480" y="48" text-anchor="middle">迴圈會把同一段工作重複做好幾次</text>
+  <rect class="center" x="330" y="98" width="300" height="124"/>
+  <text class="title" x="480" y="150" text-anchor="middle">重複執行</text>
+  <text class="text" x="480" y="185" text-anchor="middle">print("歡迎學習 Python")</text>
+  <rect class="bubble" x="120" y="125" width="130" height="70"/>
+  <rect class="bubble" x="710" y="125" width="130" height="70"/>
+  <text class="text" x="185" y="168" text-anchor="middle">第 1 次</text>
+  <text class="text" x="775" y="168" text-anchor="middle">第 2 次</text>
+  <path class="line" d="M250 160 H320"/>
+  <path class="line" d="M640 160 H710"/>
+  <path class="line" d="M480 228 C640 260 640 280 480 290 C320 280 320 260 480 228"/>
+  <text class="text" x="480" y="276" text-anchor="middle">還要再做一次嗎？</text>
+</svg>

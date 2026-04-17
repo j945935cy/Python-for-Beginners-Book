@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">變數像有名字的盒子</title>
+  <desc id="desc">顯示變數像有標籤的盒子，可以把不同資料放進去。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 20; ry: 20; }
+      .fill1 { fill: #dbeafe; }
+      .fill2 { fill: #dcfce7; }
+      .fill3 { fill: #fef3c7; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 22px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 600 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="280" rx="28" ry="28"/>
+  <text class="title" x="480" y="52" text-anchor="middle">變數就像有名字的盒子，可以把資料放進去</text>
+  <rect class="box fill1" x="90" y="90" width="220" height="120"/>
+  <rect class="box fill2" x="370" y="90" width="220" height="120"/>
+  <rect class="box fill3" x="650" y="90" width="220" height="120"/>
+  <text class="small" x="200" y="126" text-anchor="middle">變數名稱</text>
+  <text class="text" x="200" y="156" text-anchor="middle">name</text>
+  <text class="small" x="200" y="186" text-anchor="middle">內容：Amy</text>
+  <text class="small" x="480" y="126" text-anchor="middle">變數名稱</text>
+  <text class="text" x="480" y="156" text-anchor="middle">age</text>
+  <text class="small" x="480" y="186" text-anchor="middle">內容：18</text>
+  <text class="small" x="760" y="126" text-anchor="middle">變數名稱</text>
+  <text class="text" x="760" y="156" text-anchor="middle">city</text>
+  <text class="small" x="760" y="186" text-anchor="middle">內容：Taipei</text>
+</svg>

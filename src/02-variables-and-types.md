@@ -8,6 +8,8 @@
 ## 概念說明
 變數就像一個有名字的盒子，可以把資料放進去，之後再取出來使用。
 
+![變數像有名字的盒子，可以把不同資料放進去](assets/images/variable-boxes.svg)
+
 ## 範例程式
 ```python
 name = "Amy"
