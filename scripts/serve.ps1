@@ -1,9 +1,8 @@
 $ErrorActionPreference = "Stop"
 
 $root = Resolve-Path (Join-Path $PSScriptRoot "..")
-$docsPath = Join-Path $root "docs"
 
-Set-Location $docsPath
+Set-Location $root
 
 if (Get-Command py -ErrorAction SilentlyContinue) {
     py -m http.server 8000

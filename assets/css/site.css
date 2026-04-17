@@ -9,8 +9,8 @@
   --primary-soft: #eaf3ff;
   --accent: #22c1c3;
   --border: #dde9f5;
-  --code-bg: #0f172a;
-  --code-text: #e5eefc;
+  --code-bg: #f7fbff;
+  --code-text: #18324b;
   --shadow: 0 18px 45px rgba(37, 99, 235, 0.08);
   --shadow-soft: 0 10px 26px rgba(20, 40, 90, 0.05);
   --radius: 24px;
@@ -34,9 +34,9 @@ body {
   color: var(--text);
   line-height: 1.9;
   background:
-    radial-gradient(circle at top left, rgba(34, 193, 195, 0.08), transparent 24%),
-    radial-gradient(circle at top right, rgba(96, 165, 250, 0.1), transparent 26%),
-    linear-gradient(180deg, #fafdff 0%, #f1f7ff 100%);
+    radial-gradient(circle at top left, rgba(34, 193, 195, 0.05), transparent 24%),
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.07), transparent 26%),
+    linear-gradient(180deg, #fcfeff 0%, #f5f9ff 100%);
 }
 
 body.dark {
@@ -95,15 +95,14 @@ pre code {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  height: var(--header-height);
-  width: min(1380px, calc(100% - 2rem));
+  gap: 1.5rem;
+  min-height: 62px;
+  width: min(1120px, calc(100% - 2rem));
   margin: 0.9rem auto 0;
-  padding: 0 1rem;
-  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  padding: 0.7rem 1rem;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  border: 1px solid rgba(221, 233, 245, 0.9);
+  border: 1px solid rgba(221, 233, 245, 0.72);
   border-radius: 999px;
   box-shadow: var(--shadow-soft);
 }
@@ -135,7 +134,7 @@ pre code {
 
 .site-brand-text strong {
   display: block;
-  max-width: min(52vw, 26ch);
+  max-width: min(42vw, 20ch);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -181,8 +180,8 @@ pre code {
 }
 
 .site-layout {
-  width: min(1380px, calc(100% - 2rem));
-  margin: 1.3rem auto 3rem;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 1rem auto 3rem;
   display: grid;
   grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
   gap: 1.25rem;
@@ -297,15 +296,16 @@ nav#TOC ul ul {
   position: relative;
   overflow: hidden;
   margin: 0;
-  min-height: 320px;
-  padding: clamp(2rem, 1rem + 2.4vw, 3.4rem);
+  min-height: 260px;
+  padding: clamp(1.7rem, 1rem + 2vw, 2.7rem);
   background:
-    linear-gradient(135deg, rgba(21, 48, 71, 0.84), rgba(59, 130, 246, 0.72)),
+    linear-gradient(135deg, rgba(36, 73, 104, 0.68), rgba(96, 165, 250, 0.52)),
     url("../images/cover.png") center/cover no-repeat;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: 0.6rem;
 }
 
 .site-hero::after {
@@ -313,8 +313,8 @@ nav#TOC ul ul {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 42%),
-    radial-gradient(circle at bottom right, rgba(191, 219, 254, 0.14), transparent 28%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 28%);
   pointer-events: none;
 }
 
@@ -328,9 +328,9 @@ nav#TOC ul ul {
 }
 
 .site-hero-kicker {
-  margin: 0 0 0.8rem;
+  margin: 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -338,10 +338,10 @@ nav#TOC ul ul {
 
 h1.title {
   margin: 0;
-  font-size: clamp(2.3rem, 1.85rem + 1.9vw, 3.45rem);
-  line-height: 1.12;
+  font-size: clamp(2rem, 1.55rem + 1.7vw, 3rem);
+  line-height: 1.08;
   letter-spacing: 0.02em;
-  max-width: 16ch;
+  max-width: 11ch;
   text-wrap: balance;
 }
 
@@ -357,11 +357,11 @@ p.author {
 }
 
 .site-hero-lead {
-  max-width: 34rem;
-  margin: 1rem 0 0;
+  max-width: 30rem;
+  margin: 0.2rem 0 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .book-article {
@@ -460,12 +460,30 @@ pre,
 div.sourceCode {
   position: relative;
   margin: 1.2rem auto;
+}
+
+pre {
   background: var(--code-bg);
   color: var(--code-text);
   padding: 1rem 1.1rem;
   border-radius: 16px;
   overflow-x: auto;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  border: 1px solid #d9e9f8;
+  box-shadow:
+    0 10px 24px rgba(37, 99, 235, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+div.sourceCode {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+}
+
+div.sourceCode > pre {
+  margin: 0;
 }
 
 pre code,
@@ -473,18 +491,103 @@ div.sourceCode code {
   color: inherit;
 }
 
+code span.kw,
+code span.cf,
+code span.op {
+  color: #1d4ed8;
+}
+
+code span.fu,
+code span.bu {
+  color: #0f766e;
+}
+
+code span.st,
+code span.ch,
+code span.sc {
+  color: #0f766e;
+}
+
+code span.dv,
+code span.bn,
+code span.fl {
+  color: #047857;
+}
+
+code span.co,
+code span.do,
+code span.an,
+code span.cv,
+code span.in,
+code span.wa {
+  color: #6b7280;
+}
+
+code span.va,
+code span.ot,
+code span.at {
+  color: #334155;
+}
+
 .copy-code {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid #cfe0f3;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.72);
-  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f3b57;
   padding: 0.4rem 0.72rem;
   font: inherit;
   font-size: 0.88rem;
   cursor: pointer;
+}
+
+body.dark pre,
+body.dark div.sourceCode {
+  border-color: #24334c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+body.dark .copy-code {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.72);
+  color: #e2e8f0;
+}
+
+body.dark code span.kw,
+body.dark code span.cf,
+body.dark code span.op {
+  color: #8bb8ff;
+}
+
+body.dark code span.fu,
+body.dark code span.bu,
+body.dark code span.st,
+body.dark code span.ch,
+body.dark code span.sc {
+  color: #5eead4;
+}
+
+body.dark code span.dv,
+body.dark code span.bn,
+body.dark code span.fl {
+  color: #86efac;
+}
+
+body.dark code span.co,
+body.dark code span.do,
+body.dark code span.an,
+body.dark code span.cv,
+body.dark code span.in,
+body.dark code span.wa {
+  color: #94a3b8;
+}
+
+body.dark code span.va,
+body.dark code span.ot,
+body.dark code span.at {
+  color: #dbeafe;
 }
 
 p code,
@@ -605,7 +708,7 @@ body.sidebar-open {
   }
 
   .site-hero {
-    min-height: 240px;
+    min-height: 220px;
   }
 
   h1.title {

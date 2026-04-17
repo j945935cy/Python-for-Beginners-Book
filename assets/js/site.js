@@ -49,7 +49,6 @@ function ensureTopbar(titleHeader) {
     return topbar;
   }
 
-  const titleText = titleHeader.querySelector(".title")?.textContent?.trim() || "Python 程式設計入門";
   const authorText = titleHeader.querySelector(".author")?.textContent?.trim() || "J5";
 
   topbar = document.createElement("div");
@@ -58,7 +57,7 @@ function ensureTopbar(titleHeader) {
     <div class="site-brand">
       <div class="site-brand-badge">Py</div>
       <div class="site-brand-text">
-        <strong>Python for Beginners Book</strong>
+        <strong>Python 程式設計入門</strong>
         <span>${escapeHtml(authorText)}｜Python 初學者電子書</span>
       </div>
     </div>
@@ -138,6 +137,8 @@ function enhanceHero(titleHeader) {
   if (titleHeader.querySelector(".site-hero-kicker")) {
     return;
   }
+
+  titleHeader.querySelector(".author")?.remove();
 
   const heroKicker = document.createElement("p");
   heroKicker.className = "site-hero-kicker";
