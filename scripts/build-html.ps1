@@ -49,7 +49,7 @@ New-Item -ItemType Directory -Force -Path "output/html" | Out-Null
   --css="assets/css/site.css" `
   -o "index.html"
 
-$html = Get-Content "index.html" -Raw
+$html = Get-Content "index.html" -Raw -Encoding UTF8
 if ($html -notmatch 'assets/js/site\.js') {
     $scriptTag = '  <script src="assets/js/site.js"></script>' + [Environment]::NewLine + '</body>'
     $html = $html -replace '</body>', $scriptTag
