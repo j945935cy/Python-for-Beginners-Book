@@ -58,7 +58,7 @@ function ensureTopbar(titleHeader) {
     <div class="site-brand">
       <div class="site-brand-badge">Py</div>
       <div class="site-brand-text">
-        <strong>${escapeHtml(titleText)}</strong>
+        <strong>Python for Beginners Book</strong>
         <span>${escapeHtml(authorText)}｜Python 初學者電子書</span>
       </div>
     </div>
@@ -135,6 +135,20 @@ function ensureLayout(body, titleHeader, toc) {
 
 function enhanceHero(titleHeader) {
   titleHeader.removeAttribute("style");
+  if (titleHeader.querySelector(".site-hero-kicker")) {
+    return;
+  }
+
+  const heroKicker = document.createElement("p");
+  heroKicker.className = "site-hero-kicker";
+  heroKicker.textContent = "Python 初學者電子書";
+
+  const heroLead = document.createElement("p");
+  heroLead.className = "site-hero-lead";
+  heroLead.textContent = "用白話、循序漸進的方式，帶你從 Python 基礎一路學到函式。";
+
+  titleHeader.prepend(heroKicker);
+  titleHeader.append(heroLead);
 }
 
 function buildSidebar(toc, article, sidebar) {
