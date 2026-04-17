@@ -59,7 +59,8 @@ h1.title {
   font-size: clamp(2.2rem, 3.7vw, 3.25rem);
   line-height: 1.16;
   letter-spacing: 0.02em;
-  max-width: 12ch;
+  max-width: 16ch;
+  text-wrap: balance;
 }
 
 p.author {
@@ -239,6 +240,11 @@ hr {
   #title-block-header {
     padding: 38px 24px;
     border-radius: 24px;
+  }
+
+  h1.title {
+    max-width: 100%;
+    text-wrap: pretty;
   }
 
   nav#TOC {
