@@ -118,19 +118,7 @@ nav#TOC > ul > li > a {
 }
 
 nav#TOC > ul > li > ul {
-  margin: 0.75rem 0 0;
-  padding: 0.85rem 0 0 1.1rem;
-  border-top: 1px dashed #dbeafe;
-}
-
-nav#TOC > ul > li > ul > li {
-  margin: 0.45rem 0;
-  color: var(--muted);
-}
-
-nav#TOC > ul > li > ul > li > a {
-  color: #334155;
-  font-weight: 600;
+  display: none;
 }
 
 nav#TOC ul ul ul {
