@@ -1,6 +1,6 @@
 # Python for Beginners Book
 
-這是一個用 Markdown 撰寫的 Python 入門電子書專案，內容從 Python 基礎一路介紹到 Function，適合第一次接觸程式設計的讀者。
+這是一個用 Markdown 撰寫的 Python 入門電子書專案，內容從 Python 基礎一路介紹到函式，適合第一次接觸程式設計的讀者。
 
 ## 專案目標
 - 建立適合初學者閱讀的 Python 教材
@@ -12,12 +12,12 @@
 - 變數與資料型態
 - 輸入與輸出
 - 運算子
-- if 條件判斷
+- 條件判斷
 - 迴圈
-- List
-- Dictionary
-- String
-- Function
+- 清單
+- 字典
+- 字串
+- 函式
 
 ## 專案結構
 - `src/`：書籍章節 Markdown
