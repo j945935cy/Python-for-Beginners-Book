@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata>
-    <dc:title>Python 程式設計入門：從 0 到 Function</dc:title>
+    <dc:title>Python 程式設計入門：從 0 到函式</dc:title>
     <dc:language>zh-TW</dc:language>
     <dc:creator>J5</dc:creator>
     <dc:identifier>python-for-beginners-book</dc:identifier>

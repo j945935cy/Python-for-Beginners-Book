@@ -3,8 +3,24 @@ $ErrorActionPreference = "Stop"
 $root = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $root
 
-if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
-    Write-Error "Pandoc is not installed or not available in PATH."
+$pandocCommand = Get-Command pandoc -ErrorAction SilentlyContinue
+if (-not $pandocCommand -and (Test-Path "C:\Program Files\Pandoc\pandoc.exe")) {
+    $pandocCommand = @{ Source = "C:\Program Files\Pandoc\pandoc.exe" }
+}
+
+if (-not $pandocCommand) {
+    Write-Host ""
+    Write-Host "Pandoc was not found, so the HTML build cannot continue." -ForegroundColor Yellow
+    Write-Host "Please install Pandoc and make sure it is available in PATH." -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "On Windows, you can try:" -ForegroundColor Cyan
+    Write-Host "  winget install --id JohnMacFarlane.Pandoc"
+    Write-Host ""
+    Write-Host "After installation, verify it with:" -ForegroundColor Cyan
+    Write-Host "  pandoc --version"
+    Write-Host ""
+    Write-Host "Pandoc installation guide:" -ForegroundColor Cyan
+    Write-Host "  https://pandoc.org/installing.html"
     exit 1
 }
 
@@ -25,17 +41,16 @@ $chapters = @(
 New-Item -ItemType Directory -Force -Path "docs" | Out-Null
 New-Item -ItemType Directory -Force -Path "output/html" | Out-Null
 
-pandoc @chapters `
+& $pandocCommand.Source @chapters `
   --metadata-file="meta/metadata.yaml" `
+  --resource-path=".;docs" `
   --standalone `
   --toc `
   --css="assets/css/site.css" `
   -o "docs/index.html"
 
 Copy-Item "docs/index.html" "output/html/index.html" -Force
-if (Test-Path "output/html/assets") {
-    Remove-Item "output/html/assets" -Recurse -Force
-}
-Copy-Item "docs/assets" "output/html/assets" -Recurse -Force
+New-Item -ItemType Directory -Force -Path "output/html/assets" | Out-Null
+Copy-Item "docs/assets/*" "output/html/assets" -Recurse -Force
 
 Write-Host "HTML build completed: docs/index.html and output/html/index.html"

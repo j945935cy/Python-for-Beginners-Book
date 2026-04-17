@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">條件判斷流程圖</title>
+  <desc id="desc">顯示先判斷條件，再依照成立或不成立走到不同結果的流程。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 20; ry: 20; }
+      .diamond { fill: #eff6ff; stroke: #60a5fa; stroke-width: 3; }
+      .yes { fill: #ecfdf5; stroke: #34d399; stroke-width: 3; rx: 20; ry: 20; }
+      .no { fill: #fff7ed; stroke: #fb923c; stroke-width: 3; rx: 20; ry: 20; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 500 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .label { fill: #2563eb; font: 700 16px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .line { stroke: #2563eb; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="360" rx="28" ry="28"/>
+  <rect class="box" x="370" y="32" width="220" height="70"/>
+  <text class="title" x="480" y="77" text-anchor="middle">開始檢查</text>
+  <polygon class="diamond" points="480,120 620,190 480,260 340,190"/>
+  <text class="title" x="480" y="188" text-anchor="middle">條件成立嗎？</text>
+  <text class="text" x="480" y="214" text-anchor="middle">例如：score &gt;= 60</text>
+  <rect class="yes" x="90" y="260" width="240" height="70"/>
+  <text class="title" x="210" y="304" text-anchor="middle">成立</text>
+  <rect class="no" x="630" y="260" width="240" height="70"/>
+  <text class="title" x="750" y="304" text-anchor="middle">不成立</text>
+  <path class="line" d="M480 102 V120"/>
+  <path class="line" d="M372 212 L240 260"/>
+  <path class="line" d="M588 212 L720 260"/>
+  <text class="label" x="320" y="220">是</text>
+  <text class="label" x="620" y="220">否</text>
+  <text class="text" x="210" y="333" text-anchor="middle">執行 if 區塊</text>
+  <text class="text" x="750" y="333" text-anchor="middle">執行 else 區塊</text>
+</svg>

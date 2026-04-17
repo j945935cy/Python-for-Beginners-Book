@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">清單索引示意圖</title>
+  <desc id="desc">顯示清單中的每個元素按照順序排列，並有對應的索引位置。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 18; ry: 18; }
+      .slot1 { fill: #dbeafe; }
+      .slot2 { fill: #dcfce7; }
+      .slot3 { fill: #fef3c7; }
+      .slot4 { fill: #fee2e2; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 22px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 600 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="280" rx="28" ry="28"/>
+  <text class="title" x="480" y="56" text-anchor="middle">清單中的資料會依照順序排好</text>
+  <rect class="card slot1" x="80" y="90" width="180" height="90"/>
+  <rect class="card slot2" x="280" y="90" width="180" height="90"/>
+  <rect class="card slot3" x="480" y="90" width="180" height="90"/>
+  <rect class="card slot4" x="680" y="90" width="180" height="90"/>
+  <text class="text" x="170" y="145" text-anchor="middle">apple</text>
+  <text class="text" x="370" y="145" text-anchor="middle">banana</text>
+  <text class="text" x="570" y="145" text-anchor="middle">orange</text>
+  <text class="text" x="770" y="145" text-anchor="middle">grape</text>
+  <text class="small" x="170" y="220" text-anchor="middle">索引 0</text>
+  <text class="small" x="370" y="220" text-anchor="middle">索引 1</text>
+  <text class="small" x="570" y="220" text-anchor="middle">索引 2</text>
+  <text class="small" x="770" y="220" text-anchor="middle">索引 3</text>
+</svg>

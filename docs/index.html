@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="J5" />
-  <meta name="description" content="一本給初學者的 Python 入門教材，內容涵蓋基礎語法到 Function。" />
-  <title>Python 程式設計入門：從 0 到 Function</title>
+  <meta name="description" content="一本給初學者的 Python 入門教材，內容涵蓋基礎語法到函式。" />
+  <title>Python 程式設計入門：從 0 到函式</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
@@ -96,14 +95,14 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Python 程式設計入門：從 0 到 Function</h1>
+<h1 class="title">Python 程式設計入門：從 0 到函式</h1>
 <p class="author">J5</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#python-程式設計入門從-0-到-function"
-id="toc-python-程式設計入門從-0-到-function">Python 程式設計入門：從 0
-到 Function</a>
+<li><a href="#python-程式設計入門從-0-到函式"
+id="toc-python-程式設計入門從-0-到函式">Python 程式設計入門：從 0
+到函式</a>
 <ul>
 <li><a href="#目錄" id="toc-目錄">目錄</a></li>
 </ul></li>
@@ -236,8 +235,8 @@ id="toc-練習題參考解答與解析-3">練習題參考解答與解析</a>
 </ul></li>
 <li><a href="#小結-3" id="toc-小結-3">小結</a></li>
 </ul></li>
-<li><a href="#第-5-章-if-條件判斷" id="toc-第-5-章-if-條件判斷">第 5 章
-if 條件判斷</a>
+<li><a href="#第-5-章-條件判斷" id="toc-第-5-章-條件判斷">第 5 章
+條件判斷</a>
 <ul>
 <li><a href="#本章重點-4" id="toc-本章重點-4">本章重點</a></li>
 <li><a href="#概念說明-4" id="toc-概念說明-4">概念說明</a></li>
@@ -334,7 +333,7 @@ id="toc-練習題參考解答與解析-5">練習題參考解答與解析</a>
 </ul></li>
 <li><a href="#小結-5" id="toc-小結-5">小結</a></li>
 </ul></li>
-<li><a href="#第-7-章-list" id="toc-第-7-章-list">第 7 章 List</a>
+<li><a href="#第-7-章-清單" id="toc-第-7-章-清單">第 7 章 清單</a>
 <ul>
 <li><a href="#本章重點-6" id="toc-本章重點-6">本章重點</a></li>
 <li><a href="#概念說明-6" id="toc-概念說明-6">概念說明</a></li>
@@ -346,18 +345,25 @@ id="toc-範例-1建立清單並讀取元素">範例 1：建立清單並讀取元
 id="toc-範例-2修改清單中的資料">範例 2：修改清單中的資料</a></li>
 <li><a href="#範例-3加入新元素" id="toc-範例-3加入新元素">範例
 3：加入新元素</a></li>
-<li><a href="#範例-4搭配迴圈逐一顯示"
-id="toc-範例-4搭配迴圈逐一顯示">範例 4：搭配迴圈逐一顯示</a></li>
+<li><a href="#範例-4刪除元素" id="toc-範例-4刪除元素">範例
+4：刪除元素</a></li>
+<li><a href="#範例-5查看清單長度" id="toc-範例-5查看清單長度">範例
+5：查看清單長度</a></li>
+<li><a href="#範例-6搭配迴圈逐一顯示"
+id="toc-範例-6搭配迴圈逐一顯示">範例 6：搭配迴圈逐一顯示</a></li>
 </ul></li>
 <li><a href="#程式解說-6" id="toc-程式解說-6">程式解說</a>
 <ul>
-<li><a href="#如何建立-list" id="toc-如何建立-list">1. 如何建立
-List</a></li>
+<li><a href="#如何建立清單" id="toc-如何建立清單">1.
+如何建立清單</a></li>
 <li><a href="#什麼是索引" id="toc-什麼是索引">2. 什麼是索引</a></li>
 <li><a href="#修改元素內容" id="toc-修改元素內容">3.
 修改元素內容</a></li>
 <li><a href="#加入新資料" id="toc-加入新資料">4. 加入新資料</a></li>
-<li><a href="#用迴圈讀取整個清單" id="toc-用迴圈讀取整個清單">5.
+<li><a href="#刪除資料" id="toc-刪除資料">5. 刪除資料</a></li>
+<li><a href="#查看清單長度" id="toc-查看清單長度">6.
+查看清單長度</a></li>
+<li><a href="#用迴圈讀取整個清單" id="toc-用迴圈讀取整個清單">7.
 用迴圈讀取整個清單</a></li>
 </ul></li>
 <li><a href="#常見錯誤-6" id="toc-常見錯誤-6">常見錯誤</a>
@@ -368,6 +374,8 @@ List</a></li>
 索引超出範圍</a></li>
 <li><a href="#把-append-寫錯" id="toc-把-append-寫錯">3. 把
 <code>append</code> 寫錯</a></li>
+<li><a href="#刪除不存在的資料" id="toc-刪除不存在的資料">4.
+刪除不存在的資料</a></li>
 </ul></li>
 <li><a href="#練習題-6" id="toc-練習題-6">練習題</a></li>
 <li><a href="#練習題參考解答與解析-6"
@@ -378,37 +386,43 @@ id="toc-練習題參考解答與解析-6">練習題參考解答與解析</a>
 <li><a href="#第-3-題-6" id="toc-第-3-題-6">第 3 題</a></li>
 <li><a href="#第-4-題-4" id="toc-第-4-題-4">第 4 題</a></li>
 <li><a href="#第-5-題-3" id="toc-第-5-題-3">第 5 題</a></li>
+<li><a href="#第-6-題" id="toc-第-6-題">第 6 題</a></li>
 </ul></li>
 <li><a href="#小結-6" id="toc-小結-6">小結</a></li>
 </ul></li>
-<li><a href="#第-8-章-dictionary" id="toc-第-8-章-dictionary">第 8 章
-Dictionary</a>
+<li><a href="#第-8-章-字典" id="toc-第-8-章-字典">第 8 章 字典</a>
 <ul>
 <li><a href="#本章重點-7" id="toc-本章重點-7">本章重點</a></li>
 <li><a href="#概念說明-7" id="toc-概念說明-7">概念說明</a></li>
 <li><a href="#範例程式-7" id="toc-範例程式-7">範例程式</a>
 <ul>
-<li><a href="#範例-1建立-dictionary" id="toc-範例-1建立-dictionary">範例
-1：建立 Dictionary</a></li>
+<li><a href="#範例-1建立字典" id="toc-範例-1建立字典">範例
+1：建立字典</a></li>
 <li><a href="#範例-2讀取指定資料" id="toc-範例-2讀取指定資料">範例
 2：讀取指定資料</a></li>
 <li><a href="#範例-3修改與新增資料" id="toc-範例-3修改與新增資料">範例
 3：修改與新增資料</a></li>
-<li><a href="#範例-4逐一查看字典內容"
-id="toc-範例-4逐一查看字典內容">範例 4：逐一查看字典內容</a></li>
+<li><a href="#範例-4讀取多筆指定資料"
+id="toc-範例-4讀取多筆指定資料">範例 4：讀取多筆指定資料</a></li>
+<li><a href="#範例-5逐一查看字典內容"
+id="toc-範例-5逐一查看字典內容">範例 5：逐一查看字典內容</a></li>
 </ul></li>
 <li><a href="#程式解說-7" id="toc-程式解說-7">程式解說</a>
 <ul>
-<li><a href="#dictionary-的基本結構" id="toc-dictionary-的基本結構">1.
-Dictionary 的基本結構</a></li>
+<li><a href="#字典的基本結構" id="toc-字典的基本結構">1.
+字典的基本結構</a></li>
 <li><a href="#如何讀取資料" id="toc-如何讀取資料">2.
 如何讀取資料</a></li>
 <li><a href="#如何修改資料" id="toc-如何修改資料">3.
 如何修改資料</a></li>
 <li><a href="#如何新增資料" id="toc-如何新增資料">4.
 如何新增資料</a></li>
-<li><a href="#和-list-有什麼不同" id="toc-和-list-有什麼不同">5. 和 List
-有什麼不同</a></li>
+<li><a href="#讀取多筆資料" id="toc-讀取多筆資料">5.
+讀取多筆資料</a></li>
+<li><a href="#逐一查看字典內容" id="toc-逐一查看字典內容">6.
+逐一查看字典內容</a></li>
+<li><a href="#和清單有什麼不同" id="toc-和清單有什麼不同">7.
+和清單有什麼不同</a></li>
 </ul></li>
 <li><a href="#常見錯誤-7" id="toc-常見錯誤-7">常見錯誤</a>
 <ul>
@@ -431,7 +445,7 @@ id="toc-練習題參考解答與解析-7">練習題參考解答與解析</a>
 </ul></li>
 <li><a href="#小結-7" id="toc-小結-7">小結</a></li>
 </ul></li>
-<li><a href="#第-9-章-string" id="toc-第-9-章-string">第 9 章 String</a>
+<li><a href="#第-9-章-字串" id="toc-第-9-章-字串">第 9 章 字串</a>
 <ul>
 <li><a href="#本章重點-8" id="toc-本章重點-8">本章重點</a></li>
 <li><a href="#概念說明-8" id="toc-概念說明-8">概念說明</a></li>
@@ -443,8 +457,8 @@ id="toc-練習題參考解答與解析-7">練習題參考解答與解析</a>
 2：字串串接</a></li>
 <li><a href="#範例-3字串重複" id="toc-範例-3字串重複">範例
 3：字串重複</a></li>
-<li><a href="#範例-4常見字串方法" id="toc-範例-4常見字串方法">範例
-4：常見字串方法</a></li>
+<li><a href="#範例-4常見字串功能" id="toc-範例-4常見字串功能">範例
+4：常見字串功能</a></li>
 </ul></li>
 <li><a href="#程式解說-8" id="toc-程式解說-8">程式解說</a>
 <ul>
@@ -454,8 +468,8 @@ id="toc-練習題參考解答與解析-7">練習題參考解答與解析</a>
 字串可以串接</a></li>
 <li><a href="#字串也可以重複" id="toc-字串也可以重複">3.
 字串也可以重複</a></li>
-<li><a href="#常見字串方法" id="toc-常見字串方法">4.
-常見字串方法</a></li>
+<li><a href="#常見字串功能" id="toc-常見字串功能">4.
+常見字串功能</a></li>
 </ul></li>
 <li><a href="#常見錯誤-8" id="toc-常見錯誤-8">常見錯誤</a>
 <ul>
@@ -465,6 +479,8 @@ id="toc-練習題參考解答與解析-7">練習題參考解答與解析</a>
 引號沒有成對</a></li>
 <li><a href="#把方法名稱拼錯" id="toc-把方法名稱拼錯">3.
 把方法名稱拼錯</a></li>
+<li><a href="#把-len-當成字串方法" id="toc-把-len-當成字串方法">4. 把
+<code>len()</code> 當成字串方法</a></li>
 </ul></li>
 <li><a href="#練習題-8" id="toc-練習題-8">練習題</a></li>
 <li><a href="#練習題參考解答與解析-8"
@@ -478,8 +494,7 @@ id="toc-練習題參考解答與解析-8">練習題參考解答與解析</a>
 </ul></li>
 <li><a href="#小結-8" id="toc-小結-8">小結</a></li>
 </ul></li>
-<li><a href="#第-10-章-function" id="toc-第-10-章-function">第 10 章
-Function</a>
+<li><a href="#第-10-章-函式" id="toc-第-10-章-函式">第 10 章 函式</a>
 <ul>
 <li><a href="#本章重點-9" id="toc-本章重點-9">本章重點</a></li>
 <li><a href="#概念說明-9" id="toc-概念說明-9">概念說明</a></li>
@@ -526,23 +541,32 @@ id="toc-練習題參考解答與解析-9">練習題參考解答與解析</a>
 </ul></li>
 </ul>
 </nav>
-<h1 id="python-程式設計入門從-0-到-function">Python 程式設計入門：從 0
-到 Function</h1>
-<p>歡迎來到這本 Python 入門書。</p>
-<p>本書適合完全沒有程式基礎的學習者，內容會一步一步帶你認識
-Python，從最基本的語法開始，一直到 function。</p>
+<h1 id="python-程式設計入門從-0-到函式">Python 程式設計入門：從 0
+到函式</h1>
+<p>歡迎翻開這本《Python 程式設計入門：從 0 到函式》。</p>
+<p>這是一本為初學者準備的 Python
+入門書，特別適合高中生、大學生、非資訊背景的學習者，以及第一次接觸程式設計的人。</p>
+<p>本書會用白話、一步一步的方式，帶你從最基本的觀念開始學起。你不需要先有程式基礎，只要願意跟著章節慢慢練習，就能逐漸看懂
+Python 的寫法，並寫出自己的小程式。</p>
+<p>全書內容從 Python
+簡介開始，接著介紹變數、輸入與輸出、運算子、條件判斷、迴圈、清單、字典、字串，最後走到函式。這些都是初學
+Python 時最重要的核心基礎。</p>
+<p>每一章都會依照固定節奏安排內容，包括本章重點、概念說明、範例程式、程式解說、常見錯誤、練習題和小結。你可以依照順序閱讀，也可以在做練習時回頭查找前面的內容。</p>
+<p>如果你是第一次學程式，建議你不要急著往後翻。先把每一章的範例親手打過一次，再試著完成後面的練習題，學習效果通常會更好。</p>
+<p>希望這本書能陪你把 Python
+的基礎打穩，讓你從看得懂程式，到慢慢學會自己寫程式。</p>
 <h2 id="目錄">目錄</h2>
 <ol type="1">
 <li>Python 簡介</li>
 <li>變數與資料型態</li>
 <li>輸入與輸出</li>
 <li>運算子</li>
-<li>if 條件判斷</li>
+<li>條件判斷</li>
 <li>迴圈</li>
-<li>List</li>
-<li>Dictionary</li>
-<li>String</li>
-<li>Function</li>
+<li>清單</li>
+<li>字典</li>
+<li>字串</li>
+<li>函式</li>
 </ol>
 <h1 id="第-1-章-python-簡介">第 1 章 Python 簡介</h1>
 <h2 id="本章重點">本章重點</h2>
@@ -664,6 +688,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a hr
 <li><code>input()</code>：負責接收輸入內容</li>
 </ul>
 <p>只要先把這兩個工具學好，後面很多章節都會變得更好懂。</p>
+<figure>
+<img src="assets/images/input-output-flow.svg"
+alt="輸入輸出的基本流程圖" />
+<figcaption aria-hidden="true">輸入輸出的基本流程圖</figcaption>
+</figure>
 <h2 id="範例程式-2">範例程式</h2>
 <h3 id="範例-1最基本的輸出">範例 1：最基本的輸出</h3>
 <div class="sourceCode" id="cb8"><pre
@@ -960,7 +989,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a h
 <code>%</code> 處理平均分配與餘數 - 如何用比較運算子判斷大小與是否相等 -
 比較結果會得到 <code>True</code> 或 <code>False</code></p>
 <p>接下來進入條件判斷時，你就會看到這些運算子如何真正派上用場。</p>
-<h1 id="第-5-章-if-條件判斷">第 5 章 if 條件判斷</h1>
+<h1 id="第-5-章-條件判斷">第 5 章 條件判斷</h1>
 <h2 id="本章重點-4">本章重點</h2>
 <ul>
 <li>認識什麼是條件判斷</li>
@@ -984,6 +1013,12 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a h
 <li><code>else</code>：如果前面的條件都不成立，就執行這裡</li>
 </ul>
 <p>學會這一章之後，你的程式就不再只是單純從上往下執行，而是能夠根據不同情況做出不同反應。</p>
+<figure>
+<img src="assets/images/condition-branch.svg"
+alt="條件判斷會依照條件成立與否走向不同結果" />
+<figcaption
+aria-hidden="true">條件判斷會依照條件成立與否走向不同結果</figcaption>
+</figure>
 <h2 id="範例程式-4">範例程式</h2>
 <h3 id="範例-1判斷是否及格">範例 1：判斷是否及格</h3>
 <div class="sourceCode" id="cb36"><pre
@@ -1318,10 +1353,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a h
 - 使用 <code>while</code> 時要特別注意變數更新 - <code>range()</code>
 不會包含最後一個數字</p>
 <p>學會迴圈之後，你的程式就能更有效率地處理重複任務。</p>
-<h1 id="第-7-章-list">第 7 章 List</h1>
+<p>接下來的清單章節，你會學到怎麼把很多筆相關資料放在一起管理，讓迴圈能更方便地一次處理多個內容。</p>
+<h1 id="第-7-章-清單">第 7 章 清單</h1>
 <h2 id="本章重點-6">本章重點</h2>
 <ul>
-<li>認識什麼是 List</li>
+<li>認識什麼是清單</li>
 <li>學會建立與讀取清單資料</li>
 <li>學會修改、加入與刪除元素</li>
 <li>了解清單索引與長度的概念</li>
@@ -1331,11 +1367,16 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a h
 <p>但是如果今天不是只有一筆資料，而是很多筆同類型的資料呢？</p>
 <p>例如： - 三種水果名稱 - 五位同學的分數 - 一週七天的名字</p>
 <p>如果每一筆資料都開一個變數，會變得很麻煩，也不好管理。</p>
-<p>這時候就可以使用 <strong>List</strong>。</p>
-<p>List
-可以把多筆資料放在同一個變數裡，而且資料會按照順序排好。你可以把它想成一個有順序的清單，裡面一格一格放著不同內容。</p>
+<p>這時候就可以使用 <strong>清單（List）</strong>。</p>
+<p>清單可以把多筆資料放在同一個變數裡，而且資料會按照順序排好。你可以把它想成一個有順序的清單，裡面一格一格放著不同內容。</p>
 <p>在 Python 中，List 會用中括號 <code>[]</code>
 來表示，元素之間用逗號隔開。</p>
+<figure>
+<img src="assets/images/list-slots.svg"
+alt="清單中的元素會依照順序排列，而且索引從 0 開始" />
+<figcaption aria-hidden="true">清單中的元素會依照順序排列，而且索引從 0
+開始</figcaption>
+</figure>
 <h2 id="範例程式-6">範例程式</h2>
 <h3 id="範例-1建立清單並讀取元素">範例 1：建立清單並讀取元素</h3>
 <div class="sourceCode" id="cb65"><pre
@@ -1354,21 +1395,31 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a h
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">40</span>)</span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
-<h3 id="範例-4搭配迴圈逐一顯示">範例 4：搭配迴圈逐一顯示</h3>
+<h3 id="範例-4刪除元素">範例 4：刪除元素</h3>
 <div class="sourceCode" id="cb68"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
-<h2 id="程式解說-6">程式解說</h2>
-<h3 id="如何建立-list">1. 如何建立 List</h3>
-<p>建立清單很簡單，只要把資料放在中括號裡面即可。</p>
+class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>]</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>fruits.remove(<span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits)</span></code></pre></div>
+<h3 id="範例-5查看清單長度">範例 5：查看清單長度</h3>
 <div class="sourceCode" id="cb69"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>]</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(students))</span></code></pre></div>
+<h3 id="範例-6搭配迴圈逐一顯示">範例 6：搭配迴圈逐一顯示</h3>
+<div class="sourceCode" id="cb70"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
+<h2 id="程式解說-6">程式解說</h2>
+<h3 id="如何建立清單">1. 如何建立清單</h3>
+<p>建立清單很簡單，只要把資料放在中括號裡面即可。</p>
+<div class="sourceCode" id="cb71"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>]</span></code></pre></div>
 <p>這表示 <code>fruits</code> 裡面有三個元素，分別是
 <code>apple</code>、<code>banana</code>、<code>orange</code>。</p>
 <h3 id="什麼是索引">2. 什麼是索引</h3>
-<p>List 裡的每一個元素，都有自己的位置。
+<p>清單裡的每一個元素，都有自己的位置。
 這個位置叫做<strong>索引</strong>。</p>
 <p>在 Python 中，索引是從 <strong>0</strong> 開始算的，不是從 1
 開始。</p>
@@ -1376,30 +1427,42 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a h
 是第二個元素 - <code>fruits[2]</code> 是第三個元素</p>
 <p>這是初學者很容易搞混的地方，一定要特別記住。</p>
 <h3 id="修改元素內容">3. 修改元素內容</h3>
-<p>List 裡的資料是可以改的。</p>
+<p>清單裡的資料是可以改的。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb70"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>]</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>colors[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&quot;yellow&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>]</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>colors[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&quot;yellow&quot;</span></span></code></pre></div>
 <p>這表示把原本第二個元素 <code>blue</code> 改成
 <code>yellow</code>。</p>
 <p>修改之後，整個清單就會變成：</p>
-<div class="sourceCode" id="cb71"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>]</span></code></pre></div>
 <h3 id="加入新資料">4. 加入新資料</h3>
 <p>如果你想在清單最後面加入一個新元素，可以使用
 <code>append()</code>。</p>
-<div class="sourceCode" id="cb72"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">40</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">40</span>)</span></code></pre></div>
 <p>這樣 <code>40</code> 就會被加到最後面。</p>
-<h3 id="用迴圈讀取整個清單">5. 用迴圈讀取整個清單</h3>
+<h3 id="刪除資料">5. 刪除資料</h3>
+<p>如果你想刪除清單中的某個元素，可以使用 <code>remove()</code>。</p>
+<div class="sourceCode" id="cb75"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>]</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>fruits.remove(<span class="st">&quot;banana&quot;</span>)</span></code></pre></div>
+<p>這樣 <code>banana</code> 就會從清單中被移除。</p>
+<h3 id="查看清單長度">6. 查看清單長度</h3>
+<p>如果你想知道清單裡有幾筆資料，可以使用 <code>len()</code>。</p>
+<div class="sourceCode" id="cb76"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(students))</span></code></pre></div>
+<p>這裡的 <code>len(students)</code> 會告訴你清單裡總共有幾個元素。</p>
+<h3 id="用迴圈讀取整個清單">7. 用迴圈讀取整個清單</h3>
 <p>當清單裡有很多資料時，一個一個手動寫出來很不方便。</p>
 <p>所以我們通常會搭配 <code>for</code>
 迴圈，把清單裡的每個元素依序取出來。</p>
-<div class="sourceCode" id="cb73"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
 <p>這段程式會把 <code>names</code> 裡的每個名字都印出來。</p>
 <p>這種寫法很常見，之後你會經常使用。</p>
 <h2 id="常見錯誤-6">常見錯誤</h2>
@@ -1412,127 +1475,157 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a h
 <p>所以在讀取資料前，要先知道清單裡到底有幾個元素。</p>
 <h3 id="把-append-寫錯">3. 把 <code>append</code> 寫錯</h3>
 <p>加入新元素時要寫成：</p>
-<div class="sourceCode" id="cb74"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">40</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">40</span>)</span></code></pre></div>
 <p>不要漏掉括號，也不要把方法名稱拼錯。</p>
+<h3 id="刪除不存在的資料">4. 刪除不存在的資料</h3>
+<p>如果你要刪除的內容根本不在清單裡，程式就會出錯。</p>
+<p>例如清單裡沒有 <code>grape</code>，卻寫：</p>
+<div class="sourceCode" id="cb79"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>fruits.remove(<span class="st">&quot;grape&quot;</span>)</span></code></pre></div>
+<p>這樣 Python 就找不到要刪除的資料。</p>
 <h2 id="練習題-6">練習題</h2>
 <ol type="1">
 <li>建立一個包含三種飲料名稱的清單，並印出第一個元素。</li>
 <li>建立一個數字清單，修改其中一個數字後再印出整個清單。</li>
 <li>建立一個空清單，接著用 <code>append()</code> 加入三個資料。</li>
-<li>建立一個名字清單，使用 <code>for</code> 迴圈把每個名字印出來。</li>
-<li>想一想：如果要管理全班同學的名字，為什麼用 List
-會比一個一個變數方便？</li>
+<li>建立一個水果清單，刪除其中一個水果後再印出。</li>
+<li>建立一個名字清單，先印出清單長度，再使用 <code>for</code>
+迴圈把每個名字印出來。</li>
+<li>想一想：如果要管理全班同學的名字，為什麼用清單會比一個一個變數方便？</li>
 </ol>
 <h2 id="練習題參考解答與解析-6">練習題參考解答與解析</h2>
 <h3 id="第-1-題-6">第 1 題</h3>
-<div class="sourceCode" id="cb75"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>drinks <span class="op">=</span> [<span class="st">&quot;tea&quot;</span>, <span class="st">&quot;coffee&quot;</span>, <span class="st">&quot;juice&quot;</span>]</span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(drinks[<span class="dv">0</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>drinks <span class="op">=</span> [<span class="st">&quot;tea&quot;</span>, <span class="st">&quot;coffee&quot;</span>, <span class="st">&quot;juice&quot;</span>]</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(drinks[<span class="dv">0</span>])</span></code></pre></div>
 <p>解析：第一個元素的索引是 0，不是 1。</p>
 <h3 id="第-2-題-6">第 2 題</h3>
-<div class="sourceCode" id="cb76"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>numbers[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">99</span></span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>numbers[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">99</span></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
 <p>解析：用索引可以直接修改清單中的資料。</p>
 <h3 id="第-3-題-6">第 3 題</h3>
-<div class="sourceCode" id="cb77"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> []</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;apple&quot;</span>)</span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;banana&quot;</span>)</span>
-<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;orange&quot;</span>)</span>
-<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(items)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> []</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;apple&quot;</span>)</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>items.append(<span class="st">&quot;orange&quot;</span>)</span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(items)</span></code></pre></div>
 <p>解析：空清單也可以慢慢加入資料。</p>
 <h3 id="第-4-題-4">第 4 題</h3>
-<div class="sourceCode" id="cb78"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
-<p>解析：清單常和 for 迴圈一起使用，能把每個元素依序取出來。</p>
+<div class="sourceCode" id="cb83"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>]</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>fruits.remove(<span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits)</span></code></pre></div>
+<p>解析：<code>remove()</code> 可以刪除指定內容。</p>
 <h3 id="第-5-題-3">第 5 題</h3>
-<p>參考答案：因為 List
-可以把多個同類資料放在一起，比一個一個變數更好整理，也更方便重複處理。</p>
-<p>解析：這就是 List 最主要的用途。</p>
+<div class="sourceCode" id="cb84"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;小明&quot;</span>, <span class="st">&quot;小美&quot;</span>, <span class="st">&quot;阿華&quot;</span>]</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(names))</span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code></pre></div>
+<p>解析：<code>len()</code> 可以先看有幾筆資料，<code>for</code>
+迴圈則可以把每個元素依序取出來。</p>
+<h3 id="第-6-題">第 6 題</h3>
+<p>參考答案：因為清單可以把多個同類資料放在一起，比一個一個變數更好整理，也更方便重複處理。</p>
+<p>解析：這就是清單最主要的用途。</p>
 <h2 id="小結-6">小結</h2>
-<p>這一章你已經學會了 List 的基本概念。</p>
-<p>你現在知道： - List 可以一次存放多筆資料 -
+<p>這一章你已經學會了清單的基本概念。</p>
+<p>你現在知道： - 清單可以一次存放多筆資料 -
 清單中的元素有順序，也有索引 - Python 的索引從 0 開始 -
-可以修改元素，也可以用 <code>append()</code> 加入資料 - 清單常常會搭配
-<code>for</code> 迴圈一起使用</p>
-<p>學會 List 之後，你就更能有效管理多筆相關資料。</p>
-<h1 id="第-8-章-dictionary">第 8 章 Dictionary</h1>
+可以修改元素，也可以用 <code>append()</code> 加入資料 - 可以用
+<code>remove()</code> 刪除資料 - 可以用 <code>len()</code>
+查看有幾筆資料 - 清單常常會搭配 <code>for</code> 迴圈一起使用</p>
+<p>學會清單之後，你就更能有效管理多筆相關資料。</p>
+<h1 id="第-8-章-字典">第 8 章 字典</h1>
 <h2 id="本章重點-7">本章重點</h2>
 <ul>
-<li>認識 Dictionary 的基本概念</li>
+<li>認識字典的基本概念</li>
 <li>學會鍵與值的對應方式</li>
 <li>學會建立、讀取、修改與新增資料</li>
-<li>了解 Dictionary 和 List 的差別</li>
+<li>了解字典和清單的差別</li>
 </ul>
 <h2 id="概念說明-7">概念說明</h2>
-<p>前一章我們學到 List，知道它適合拿來存放一組有順序的資料。</p>
+<p>前一章我們學到清單，知道它適合拿來存放一組有順序的資料。</p>
 <p>但是有些資料，不只是單純排成一列，而是每一筆資料都有「欄位名稱」。</p>
 <p>例如一位學生的資料可能有： - 姓名 - 年齡 - 分數</p>
-<p>如果只用 List 來放，就必須一直記住第 0 個是名字、第 1 個是年齡、第 2
+<p>如果只用清單來放，就必須一直記住第 0 個是名字、第 1 個是年齡、第 2
 個是分數。這樣雖然也做得到，但不夠直覺。</p>
-<p>這時候就很適合用 <strong>Dictionary</strong>。</p>
-<p>Dictionary 中文通常會翻成「字典」。它的特色是：
+<p>這時候就很適合用 <strong>字典（Dictionary）</strong>。</p>
+<p>字典的特色是：
 <strong>每一筆資料都有一個名稱，透過這個名稱去找到對應的值。</strong></p>
-<p>在 Dictionary 裡： - 名稱叫做 <strong>鍵</strong>，英文是 key -
+<p>在字典裡： - 名稱叫做 <strong>鍵</strong>，英文是 key -
 對應的內容叫做 <strong>值</strong>，英文是 value</p>
 <p>你可以把它想成查字典： 輸入一個字，就能找到對應的解釋。</p>
 <p>在 Python 中，Dictionary 會使用大括號 <code>{}</code>，裡面放「鍵:
 值」的組合。</p>
+<figure>
+<img src="assets/images/dictionary-map.svg"
+alt="字典中的鍵會對應到不同的值" />
+<figcaption aria-hidden="true">字典中的鍵會對應到不同的值</figcaption>
+</figure>
 <h2 id="範例程式-7">範例程式</h2>
-<h3 id="範例-1建立-dictionary">範例 1：建立 Dictionary</h3>
-<div class="sourceCode" id="cb79"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span>,</span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;score&quot;</span>: <span class="dv">95</span></span>
-<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student)</span></code></pre></div>
+<h3 id="範例-1建立字典">範例 1：建立字典</h3>
+<div class="sourceCode" id="cb85"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span>,</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;score&quot;</span>: <span class="dv">95</span></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student)</span></code></pre></div>
 <h3 id="範例-2讀取指定資料">範例 2：讀取指定資料</h3>
-<div class="sourceCode" id="cb80"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span></span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;name&quot;</span>])</span>
-<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;age&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span></span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;name&quot;</span>])</span>
+<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;age&quot;</span>])</span></code></pre></div>
 <h3 id="範例-3修改與新增資料">範例 3：修改與新增資料</h3>
-<div class="sourceCode" id="cb81"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span></span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> <span class="dv">19</span></span>
-<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;city&quot;</span>] <span class="op">=</span> <span class="st">&quot;Taipei&quot;</span></span>
-<span id="cb81-8"><a href="#cb81-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-9"><a href="#cb81-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student)</span></code></pre></div>
-<h3 id="範例-4逐一查看字典內容">範例 4：逐一查看字典內容</h3>
-<div class="sourceCode" id="cb82"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>product <span class="op">=</span> {</span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Notebook&quot;</span>,</span>
-<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;price&quot;</span>: <span class="dv">35</span>,</span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;stock&quot;</span>: <span class="dv">20</span></span>
-<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> product:</span>
-<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, <span class="st">&quot;:&quot;</span>, product[key])</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span></span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;city&quot;</span>] <span class="op">=</span> <span class="st">&quot;Taipei&quot;</span></span>
+<span id="cb87-8"><a href="#cb87-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-9"><a href="#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student)</span></code></pre></div>
+<h3 id="範例-4讀取多筆指定資料">範例 4：讀取多筆指定資料</h3>
+<div class="sourceCode" id="cb88"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>product <span class="op">=</span> {</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Notebook&quot;</span>,</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;price&quot;</span>: <span class="dv">35</span>,</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;stock&quot;</span>: <span class="dv">20</span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(product[<span class="st">&quot;name&quot;</span>])</span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(product[<span class="st">&quot;price&quot;</span>])</span></code></pre></div>
+<h3 id="範例-5逐一查看字典內容">範例 5：逐一查看字典內容</h3>
+<div class="sourceCode" id="cb89"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>product <span class="op">=</span> {</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Notebook&quot;</span>,</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;price&quot;</span>: <span class="dv">35</span>,</span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;stock&quot;</span>: <span class="dv">20</span></span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> product:</span>
+<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, <span class="st">&quot;:&quot;</span>, product[key])</span></code></pre></div>
 <h2 id="程式解說-7">程式解說</h2>
-<h3 id="dictionary-的基本結構">1. Dictionary 的基本結構</h3>
+<h3 id="字典的基本結構">1. 字典的基本結構</h3>
 <p>先看這段：</p>
-<div class="sourceCode" id="cb83"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
-<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
-<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span>,</span>
-<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;score&quot;</span>: <span class="dv">95</span></span>
-<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>這裡的 <code>student</code> 是一個 Dictionary。 裡面有三組資料：</p>
+<div class="sourceCode" id="cb90"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>,</span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;age&quot;</span>: <span class="dv">18</span>,</span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;score&quot;</span>: <span class="dv">95</span></span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>這裡的 <code>student</code> 是一個字典。 裡面有三組資料：</p>
 <ul>
 <li><code>name</code> 對應 <code>Amy</code></li>
 <li><code>age</code> 對應 <code>18</code></li>
@@ -1541,100 +1634,118 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a h
 <p>這就是鍵和值的關係。</p>
 <h3 id="如何讀取資料">2. 如何讀取資料</h3>
 <p>如果你想取出某一筆資料，可以用：</p>
-<div class="sourceCode" id="cb84"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;name&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;name&quot;</span>]</span></code></pre></div>
 <p>這表示：到 <code>student</code> 這本字典裡，找鍵是 <code>name</code>
 的資料。</p>
 <p>如果這筆資料存在，就能拿到對應的值。</p>
 <h3 id="如何修改資料">3. 如何修改資料</h3>
-<p>Dictionary 的值是可以更新的。</p>
+<p>字典的值是可以更新的。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb85"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> <span class="dv">19</span></span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> <span class="dv">19</span></span></code></pre></div>
 <p>這行程式會把原本的年齡改成 19。</p>
 <h3 id="如何新增資料">4. 如何新增資料</h3>
 <p>如果這個鍵原本不存在，Python 會幫你新增一筆資料。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb86"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;city&quot;</span>] <span class="op">=</span> <span class="st">&quot;Taipei&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;city&quot;</span>] <span class="op">=</span> <span class="st">&quot;Taipei&quot;</span></span></code></pre></div>
 <p>這樣字典裡就會多出一個 <code>city</code>。</p>
 <p>所以同樣的寫法，既可以修改，也可以新增，差別在於那個鍵原本有沒有存在。</p>
-<h3 id="和-list-有什麼不同">5. 和 List 有什麼不同</h3>
+<h3 id="讀取多筆資料">5. 讀取多筆資料</h3>
+<p>如果你已經知道想看的鍵，也可以一筆一筆把資料印出來。</p>
+<p>例如：</p>
+<div class="sourceCode" id="cb94"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>product <span class="op">=</span> {</span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Notebook&quot;</span>,</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;price&quot;</span>: <span class="dv">35</span>,</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;stock&quot;</span>: <span class="dv">20</span></span>
+<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-7"><a href="#cb94-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(product[<span class="st">&quot;name&quot;</span>])</span>
+<span id="cb94-8"><a href="#cb94-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(product[<span class="st">&quot;price&quot;</span>])</span></code></pre></div>
+<p>這樣的寫法很適合剛開始學字典時，先熟悉怎麼透過鍵找到值。</p>
+<h3 id="逐一查看字典內容">6. 逐一查看字典內容</h3>
+<p>如果你想一次看完整個字典，也可以搭配 <code>for</code>
+迴圈，把每個鍵依序取出來。</p>
+<div class="sourceCode" id="cb95"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> product:</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, <span class="st">&quot;:&quot;</span>, product[key])</span></code></pre></div>
+<p>這裡的 <code>key</code> 會依序變成
+<code>name</code>、<code>price</code>、<code>stock</code>，所以最後可以把整份資料一項一項印出來。</p>
+<h3 id="和清單有什麼不同">7. 和清單有什麼不同</h3>
 <p>這是很重要的觀念：</p>
 <ul>
-<li>List 是用位置找資料，例如第 0 個、第 1 個</li>
-<li>Dictionary 是用名稱找資料，例如
-<code>name</code>、<code>age</code></li>
+<li>清單是用位置找資料，例如第 0 個、第 1 個</li>
+<li>字典是用名稱找資料，例如 <code>name</code>、<code>age</code></li>
 </ul>
-<p>如果資料很適合用欄位名稱表示，通常 Dictionary 會更清楚。</p>
+<p>如果資料很適合用欄位名稱表示，通常字典會更清楚。</p>
 <h2 id="常見錯誤-7">常見錯誤</h2>
 <h3 id="讀取不存在的鍵">1. 讀取不存在的鍵</h3>
 <p>例如：</p>
-<div class="sourceCode" id="cb87"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>}</span>
-<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;score&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amy&quot;</span>}</span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">&quot;score&quot;</span>])</span></code></pre></div>
 <p>這裡會出錯，因為 <code>score</code> 這個鍵並不存在。</p>
 <h3 id="忘記鍵要用正確格式">2. 忘記鍵要用正確格式</h3>
 <p>通常字串型態的鍵要加引號，例如：</p>
-<div class="sourceCode" id="cb88"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;name&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>student[<span class="st">&quot;name&quot;</span>]</span></code></pre></div>
 <p>如果少了引號，Python 可能會把它當成變數來看，造成錯誤。</p>
 <h3 id="把大括號和中括號弄混">3. 把大括號和中括號弄混</h3>
 <ul>
-<li>Dictionary 建立時用大括號 <code>{}</code></li>
+<li>字典建立時用大括號 <code>{}</code></li>
 <li>讀取指定鍵時用中括號 <code>[]</code></li>
 </ul>
 <p>這兩種符號用途不同，不能混用。</p>
 <h2 id="練習題-7">練習題</h2>
 <ol type="1">
-<li>建立一個 <code>book</code> Dictionary，裡面放書名、作者與頁數。</li>
-<li>讀取你建立的 Dictionary 中其中一筆資料並印出。</li>
+<li>建立一個 <code>book</code> 字典，裡面放書名、作者與頁數。</li>
+<li>讀取你建立的字典中其中一筆資料並印出。</li>
 <li>修改其中一個值，例如把頁數改大一點。</li>
 <li>再新增一個欄位，例如出版社或價格。</li>
-<li>想一想：學生資料、商品資料、天氣資料，哪些情況適合用
-Dictionary？為什麼？</li>
+<li>想一想：學生資料、商品資料、天氣資料，哪些情況適合用字典？為什麼？</li>
 </ol>
 <h2 id="練習題參考解答與解析-7">練習題參考解答與解析</h2>
 <h3 id="第-1-題-7">第 1 題</h3>
-<div class="sourceCode" id="cb89"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> {</span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;title&quot;</span>: <span class="st">&quot;Python 入門&quot;</span>,</span>
-<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;author&quot;</span>: <span class="st">&quot;J5&quot;</span>,</span>
-<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pages&quot;</span>: <span class="dv">200</span></span>
-<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
-<p>解析：Dictionary 用大括號建立，裡面放鍵和值。</p>
+<div class="sourceCode" id="cb98"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> {</span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;title&quot;</span>: <span class="st">&quot;Python 入門&quot;</span>,</span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;author&quot;</span>: <span class="st">&quot;J5&quot;</span>,</span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pages&quot;</span>: <span class="dv">200</span></span>
+<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
+<p>解析：字典用大括號建立，裡面放鍵和值。</p>
 <h3 id="第-2-題-7">第 2 題</h3>
-<div class="sourceCode" id="cb90"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book[<span class="st">&quot;title&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book[<span class="st">&quot;title&quot;</span>])</span></code></pre></div>
 <p>解析：想取出某一筆資料時，要用對應的鍵去讀取。</p>
 <h3 id="第-3-題-7">第 3 題</h3>
-<div class="sourceCode" id="cb91"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>book[<span class="st">&quot;pages&quot;</span>] <span class="op">=</span> <span class="dv">220</span></span>
-<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>book[<span class="st">&quot;pages&quot;</span>] <span class="op">=</span> <span class="dv">220</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
 <p>解析：如果鍵已存在，指定新值就是修改資料。</p>
 <h3 id="第-4-題-5">第 4 題</h3>
-<div class="sourceCode" id="cb92"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>book[<span class="st">&quot;publisher&quot;</span>] <span class="op">=</span> <span class="st">&quot;自出版&quot;</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>book[<span class="st">&quot;publisher&quot;</span>] <span class="op">=</span> <span class="st">&quot;自出版&quot;</span></span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code></pre></div>
 <p>解析：如果鍵原本不存在，這樣寫就會新增一筆資料。</p>
 <h3 id="第-5-題-4">第 5 題</h3>
-<p>參考答案：學生資料、商品資料、天氣資料都很適合用
-Dictionary，因為它們都有清楚的欄位名稱，例如姓名、價格、溫度。</p>
-<p>解析：只要資料適合用名稱管理，就很適合用 Dictionary。</p>
+<p>參考答案：學生資料、商品資料、天氣資料都很適合用字典，因為它們都有清楚的欄位名稱，例如姓名、價格、溫度。</p>
+<p>解析：只要資料適合用名稱管理，就很適合用字典。</p>
 <h2 id="小結-7">小結</h2>
-<p>這一章你已經學會 Dictionary 的基本操作。</p>
-<p>你現在知道： - Dictionary 是由鍵和值組成 - 可以透過鍵快速找到對應資料
-- 可以新增、修改與讀取內容 - 它很適合表示有欄位名稱的資料 - 和 List
-相比，Dictionary 更適合用「名稱」管理資訊</p>
-<p>學會 Dictionary 之後，你處理資料的方式會更有條理。</p>
-<h1 id="第-9-章-string">第 9 章 String</h1>
+<p>這一章你已經學會字典的基本操作。</p>
+<p>你現在知道： - 字典是由鍵和值組成 - 可以透過鍵快速找到對應資料 -
+可以新增、修改與讀取內容 - 它很適合表示有欄位名稱的資料 -
+和清單相比，字典更適合用「名稱」管理資訊</p>
+<p>學會字典之後，你處理資料的方式會更有條理。</p>
+<h1 id="第-9-章-字串">第 9 章 字串</h1>
 <h2 id="本章重點-8">本章重點</h2>
 <ul>
 <li>認識什麼是字串</li>
 <li>學會建立與輸出文字資料</li>
 <li>學會字串串接與重複</li>
-<li>認識常見的字串方法</li>
+<li>認識常見的字串功能</li>
 </ul>
 <h2 id="概念說明-8">概念說明</h2>
 <p>在 Python
@@ -1644,98 +1755,107 @@ Dictionary，因為它們都有清楚的欄位名稱，例如姓名、價格、�
 <p>在 Python 中，字串要放在引號裡面，可以使用單引號
 <code>' '</code>，也可以使用雙引號 <code>" "</code>。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb93"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Amy&quot;</span></span>
-<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">&#39;Hello&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Amy&quot;</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">&#39;Hello&#39;</span></span></code></pre></div>
 <p>這兩種寫法都可以，只要前後成對就沒問題。</p>
 <p>字串在程式裡非常重要，因為很多和人互動的內容都和文字有關，例如輸入名字、顯示提示訊息、處理句子內容等等。</p>
 <h2 id="範例程式-8">範例程式</h2>
 <h3 id="範例-1建立與輸出字串">範例 1：建立與輸出字串</h3>
-<div class="sourceCode" id="cb94"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Python&quot;</span></span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;歡迎學習 Python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Python&quot;</span></span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;歡迎學習 Python&quot;</span>)</span></code></pre></div>
 <h3 id="範例-2字串串接">範例 2：字串串接</h3>
-<div class="sourceCode" id="cb95"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
-<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
-<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> last_name</span>
-<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(full_name)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> last_name</span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-5"><a href="#cb104-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(full_name)</span></code></pre></div>
 <h3 id="範例-3字串重複">範例 3：字串重複</h3>
-<div class="sourceCode" id="cb96"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> <span class="st">&quot;=&quot;</span> <span class="op">*</span> <span class="dv">10</span></span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line)</span></code></pre></div>
-<h3 id="範例-4常見字串方法">範例 4：常見字串方法</h3>
-<div class="sourceCode" id="cb97"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python programming&quot;</span></span>
-<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span>
-<span id="cb97-4"><a href="#cb97-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.title())</span>
-<span id="cb97-5"><a href="#cb97-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(text))</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> <span class="st">&quot;=&quot;</span> <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line)</span></code></pre></div>
+<h3 id="範例-4常見字串功能">範例 4：常見字串功能</h3>
+<div class="sourceCode" id="cb106"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python programming&quot;</span></span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.title())</span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(text))</span></code></pre></div>
 <h2 id="程式解說-8">程式解說</h2>
 <h3 id="字串要放在引號裡">1. 字串要放在引號裡</h3>
 <p>如果你想在程式中表示一段文字，就必須把它放進引號。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb98"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;你好&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;你好&quot;</span>)</span></code></pre></div>
 <p>這樣 Python 才知道你要處理的是文字，而不是變數名稱。</p>
 <h3 id="字串可以串接">2. 字串可以串接</h3>
 <p>字串和字串之間可以用 <code>+</code> 接起來。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb99"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
-<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
-<span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> last_name</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> first_name <span class="op">+</span> last_name</span></code></pre></div>
 <p>這樣就會把兩段文字合成一段新的文字。</p>
 <p>如果你想中間多一個空格，也可以自己加上去：</p>
-<div class="sourceCode" id="cb100"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>english_name <span class="op">=</span> <span class="st">&quot;Amy&quot;</span> <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> <span class="st">&quot;Chen&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>english_name <span class="op">=</span> <span class="st">&quot;Amy&quot;</span> <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> <span class="st">&quot;Chen&quot;</span></span></code></pre></div>
 <h3 id="字串也可以重複">3. 字串也可以重複</h3>
 <p>除了串接，字串還可以和數字搭配使用 <code>*</code>。</p>
-<div class="sourceCode" id="cb101"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hi&quot;</span> <span class="op">*</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hi&quot;</span> <span class="op">*</span> <span class="dv">3</span>)</span></code></pre></div>
 <p>結果會是：</p>
-<div class="sourceCode" id="cb102"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>HiHiHi</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>HiHiHi</span></code></pre></div>
 <p>這種寫法有時候可以拿來做分隔線或簡單排版。</p>
-<h3 id="常見字串方法">4. 常見字串方法</h3>
-<p>Python 提供很多方便的字串方法，這裡先介紹幾個初學者常用的：</p>
+<h3 id="常見字串功能">4. 常見字串功能</h3>
+<p>Python 提供很多方便的字串功能，這裡先介紹幾個初學者常用的：</p>
 <ul>
 <li><code>upper()</code>：轉成大寫</li>
 <li><code>lower()</code>：轉成小寫</li>
 <li><code>title()</code>：每個單字開頭改成大寫</li>
-<li><code>len()</code>：計算字串長度</li>
 </ul>
 <p>例如：</p>
-<div class="sourceCode" id="cb103"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python programming&quot;</span></span>
-<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python programming&quot;</span></span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span></code></pre></div>
 <p>這樣會輸出：</p>
-<div class="sourceCode" id="cb104"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>PYTHON PROGRAMMING</span></code></pre></div>
-<p>而 <code>len(text)</code> 則會告訴你這段文字總共有幾個字元。</p>
+<div class="sourceCode" id="cb113"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>PYTHON PROGRAMMING</span></code></pre></div>
+<p>上面這些像
+<code>upper()</code>、<code>lower()</code>、<code>title()</code>，都是字串常用的方法。</p>
+<p>如果你想知道字串長度，可以使用 <code>len()</code>。</p>
+<div class="sourceCode" id="cb114"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(text))</span></code></pre></div>
+<p>這裡的 <code>len()</code> 是 Python 提供的函式，不是字串方法。
+它會告訴你這段文字總共有幾個字元。</p>
 <h2 id="常見錯誤-8">常見錯誤</h2>
 <h3 id="把字串和數字直接相加">1. 把字串和數字直接相加</h3>
 <p>這是很常見的初學者錯誤。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb105"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;我的年齡是&quot;</span> <span class="op">+</span> age)</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;我的年齡是&quot;</span> <span class="op">+</span> age)</span></code></pre></div>
 <p>這樣會出錯，因為前面是字串，後面是整數。</p>
 <p>比較簡單的寫法是：</p>
-<div class="sourceCode" id="cb106"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;我的年齡是&quot;</span>, age)</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;我的年齡是&quot;</span>, age)</span></code></pre></div>
 <h3 id="引號沒有成對">2. 引號沒有成對</h3>
 <p>例如少打一個引號，Python 就會報語法錯誤。</p>
 <p>錯誤示意：</p>
-<div class="sourceCode" id="cb107"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello)</span></span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello)</span></span></code></pre></div>
 <h3 id="把方法名稱拼錯">3. 把方法名稱拼錯</h3>
 <p>像 <code>upper()</code>、<code>lower()</code>
 這些方法，如果拼錯，程式就不會成功執行。</p>
 <p>所以打字時要特別注意大小寫與拼字。</p>
+<h3 id="把-len-當成字串方法">4. 把 <code>len()</code> 當成字串方法</h3>
+<p><code>len()</code> 要寫成 <code>len(text)</code>，不能寫成
+<code>text.len()</code>。</p>
+<p>因為 <code>len()</code> 是函式，不是字串方法。</p>
 <h2 id="練習題-8">練習題</h2>
 <ol type="1">
 <li>建立一個字串變數，存放你的名字，然後印出來。</li>
@@ -1747,42 +1867,42 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a 
 </ol>
 <h2 id="練習題參考解答與解析-8">練習題參考解答與解析</h2>
 <h3 id="第-1-題-8">第 1 題</h3>
-<div class="sourceCode" id="cb108"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;J5&quot;</span></span>
-<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;J5&quot;</span></span>
+<span id="cb118-2"><a href="#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
 <p>解析：字串要放在引號裡，這樣 Python 才知道它是文字。</p>
 <h3 id="第-2-題-8">第 2 題</h3>
-<div class="sourceCode" id="cb109"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
-<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
-<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> last_name <span class="op">+</span> first_name</span>
-<span id="cb109-4"><a href="#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(full_name)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="st">&quot;王&quot;</span></span>
+<span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">&quot;小明&quot;</span></span>
+<span id="cb119-3"><a href="#cb119-3" aria-hidden="true" tabindex="-1"></a>full_name <span class="op">=</span> last_name <span class="op">+</span> first_name</span>
+<span id="cb119-4"><a href="#cb119-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(full_name)</span></code></pre></div>
 <p>解析：字串可以用 <code>+</code> 串接成一段完整內容。</p>
 <h3 id="第-3-題-8">第 3 題</h3>
-<div class="sourceCode" id="cb110"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">20</span>)</span></code></pre></div>
 <p>解析：字串乘上數字可以重複顯示多次。</p>
 <h3 id="第-4-題-6">第 4 題</h3>
-<div class="sourceCode" id="cb111"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python book&quot;</span></span>
-<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span>
-<span id="cb111-3"><a href="#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.lower())</span>
-<span id="cb111-4"><a href="#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.title())</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;python book&quot;</span></span>
+<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.upper())</span>
+<span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.lower())</span>
+<span id="cb121-4"><a href="#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text.title())</span></code></pre></div>
 <p>解析：這三個方法分別能改變字母大小寫的呈現方式。</p>
 <h3 id="第-5-題-5">第 5 題</h3>
-<div class="sourceCode" id="cb112"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> <span class="st">&quot;Hello Python&quot;</span></span>
-<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(sentence))</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> <span class="st">&quot;Hello Python&quot;</span></span>
+<span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(sentence))</span></code></pre></div>
 <p>解析：<code>len()</code> 會回傳字串長度，也包含空格在內。</p>
 <h2 id="小結-8">小結</h2>
 <p>這一章你已經學會字串的基本操作。</p>
 <p>你現在知道： - 字串是用來表示文字資料的型態 - 文字要放在引號裡 -
 可以用 <code>+</code> 進行字串串接 - 可以用 <code>*</code> 做重複輸出 -
 可以使用
-<code>upper()</code>、<code>lower()</code>、<code>title()</code>、<code>len()</code>
-等常見功能</p>
+<code>upper()</code>、<code>lower()</code>、<code>title()</code>
+等字串方法 - 可以使用 <code>len()</code> 這個函式計算字串長度</p>
 <p>字串是程式設計中非常常用的資料型態，學熟之後會幫助你更自然地處理各種文字內容。</p>
-<h1 id="第-10-章-function">第 10 章 Function</h1>
+<h1 id="第-10-章-函式">第 10 章 函式</h1>
 <h2 id="本章重點-9">本章重點</h2>
 <ul>
 <li>認識函式的用途</li>
@@ -1795,50 +1915,55 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a 
 <p>例如： - 一直重複顯示歡迎訊息 - 多次計算兩個數字的總和 -
 依照不同名字顯示不同問候語</p>
 <p>如果每次都把相同的程式碼再寫一遍，不但麻煩，也很難維護。</p>
-<p>這時候就可以使用
-<strong>Function</strong>，中文通常叫做<strong>函式</strong>。</p>
+<p>這時候就可以使用 <strong>函式（Function）</strong>。</p>
 <p>函式可以把一段有特定用途的程式整理起來，等到需要的時候再呼叫使用。</p>
 <p>你可以把函式想成一台小機器： - 給它資料 - 它幫你做事 -
 再把結果顯示出來或回傳回來</p>
 <p>函式的好處很多： - 減少重複程式碼 - 讓程式更清楚 -
 方便修改與重複使用</p>
 <p>這也是你在本書中學到的一個很重要的整理能力。</p>
+<figure>
+<img src="assets/images/function-machine.svg"
+alt="函式可以像小機器一樣接收資料、處理資料，再回傳結果" />
+<figcaption
+aria-hidden="true">函式可以像小機器一樣接收資料、處理資料，再回傳結果</figcaption>
+</figure>
 <h2 id="範例程式-9">範例程式</h2>
 <h3 id="範例-1最基本的函式">範例 1：最基本的函式</h3>
-<div class="sourceCode" id="cb113"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎來學 Python&quot;</span>)</span>
-<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
+<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎來學 Python&quot;</span>)</span>
+<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-4"><a href="#cb123-4" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
 <h3 id="範例-2有參數的函式">範例 2：有參數的函式</h3>
-<div class="sourceCode" id="cb114"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
-<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span>
-<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Amy&quot;</span>)</span>
-<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Jack&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
+<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span>
+<span id="cb124-3"><a href="#cb124-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb124-4"><a href="#cb124-4" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Amy&quot;</span>)</span>
+<span id="cb124-5"><a href="#cb124-5" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Jack&quot;</span>)</span></code></pre></div>
 <h3 id="範例-3回傳結果的函式">範例 3：回傳結果的函式</h3>
-<div class="sourceCode" id="cb115"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
-<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
-<span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-5"><a href="#cb115-5" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> add_numbers(<span class="dv">10</span>, <span class="dv">5</span>)</span>
-<span id="cb115-6"><a href="#cb115-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
+<span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb125-5"><a href="#cb125-5" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> add_numbers(<span class="dv">10</span>, <span class="dv">5</span>)</span>
+<span id="cb125-6"><a href="#cb125-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
 <h3 id="範例-4搭配輸入使用">範例 4：搭配輸入使用</h3>
-<div class="sourceCode" id="cb116"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_user_name(name):</span>
-<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你的名字是：&quot;</span> <span class="op">+</span> name)</span>
-<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a>user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;請輸入名字：&quot;</span>)</span>
-<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a>print_user_name(user_name)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_user_name(name):</span>
+<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你的名字是：&quot;</span> <span class="op">+</span> name)</span>
+<span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb126-4"><a href="#cb126-4" aria-hidden="true" tabindex="-1"></a>user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;請輸入名字：&quot;</span>)</span>
+<span id="cb126-5"><a href="#cb126-5" aria-hidden="true" tabindex="-1"></a>print_user_name(user_name)</span></code></pre></div>
 <h2 id="程式解說-9">程式解說</h2>
 <h3 id="如何定義函式">1. 如何定義函式</h3>
 <p>在 Python 中，定義函式要使用 <code>def</code>。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb117"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎來學 Python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
+<span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎來學 Python&quot;</span>)</span></code></pre></div>
 <p>這裡的意思是： - <code>def</code> 表示要定義一個函式 -
 <code>say_hello</code> 是函式名稱 - 後面的括號 <code>()</code>
 是函式格式的一部分 - 冒號 <code>:</code> 後面接的是函式要做的事</p>
@@ -1847,56 +1972,56 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a 
 <p>這是非常重要的一點。</p>
 <p>很多初學者以為函式定義完就會自動執行，其實不會。</p>
 <p>你必須主動呼叫它：</p>
-<div class="sourceCode" id="cb118"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
 <p>這樣程式才會真的去執行函式裡面的內容。</p>
 <h3 id="什麼是參數">3. 什麼是參數</h3>
 <p>有時候同一個函式想處理不同資料，就可以使用<strong>參數</strong>。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb119"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
-<span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
+<span id="cb129-2"><a href="#cb129-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span></code></pre></div>
 <p>這裡的 <code>name</code> 就是參數。</p>
 <p>它的意思是：
 「當別人呼叫這個函式時，可以順便給我一個名字，我就用這個名字來打招呼。」</p>
 <p>所以：</p>
-<div class="sourceCode" id="cb120"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Amy&quot;</span>)</span>
-<span id="cb120-2"><a href="#cb120-2" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Jack&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Amy&quot;</span>)</span>
+<span id="cb130-2"><a href="#cb130-2" aria-hidden="true" tabindex="-1"></a>say_hello(<span class="st">&quot;Jack&quot;</span>)</span></code></pre></div>
 <p>雖然呼叫的是同一個函式，但會得到不同結果。</p>
 <h3 id="什麼是回傳值">4. 什麼是回傳值</h3>
 <p>有些函式不是只做一件事然後印出來，而是會把結果送回去，讓外面繼續使用。</p>
 <p>這時就會用到 <code>return</code>。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb121"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
-<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(x, y):</span>
+<span id="cb131-2"><a href="#cb131-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb131-3"><a href="#cb131-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
 <p>這個函式會把兩個數字相加，再把答案回傳出去。</p>
 <p>外面就可以這樣接住它：</p>
-<div class="sourceCode" id="cb122"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> add_numbers(<span class="dv">10</span>, <span class="dv">5</span>)</span>
-<span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> add_numbers(<span class="dv">10</span>, <span class="dv">5</span>)</span>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
 <p>這樣做的好處是，計算結果可以繼續拿來做別的事情，而不只是當場印出來。</p>
 <h2 id="常見錯誤-9">常見錯誤</h2>
 <h3 id="定義函式後忘記呼叫">1. 定義函式後忘記呼叫</h3>
 <p>例如：</p>
-<div class="sourceCode" id="cb123"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
+<span id="cb133-2"><a href="#cb133-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好&quot;</span>)</span></code></pre></div>
 <p>這樣只是在「定義」函式，還沒有真正執行。</p>
 <p>如果你想看到結果，還要再加上：</p>
-<div class="sourceCode" id="cb124"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
 <h3 id="參數數量不一致">2. 參數數量不一致</h3>
 <p>如果函式定義時需要一個參數，呼叫時就要提供一個資料。</p>
 <p>例如：</p>
-<div class="sourceCode" id="cb125"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
-<span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello(name):</span>
+<span id="cb135-2"><a href="#cb135-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;你好，&quot;</span> <span class="op">+</span> name)</span></code></pre></div>
 <p>如果你直接寫：</p>
-<div class="sourceCode" id="cb126"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div>
 <p>就會出錯，因為少給了 <code>name</code>。</p>
 <h3 id="縮排不正確-1">3. 縮排不正確</h3>
 <p>函式裡面的內容一定要縮排，不然 Python
@@ -1914,35 +2039,35 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a 
 </ol>
 <h2 id="練習題參考解答與解析-9">練習題參考解答與解析</h2>
 <h3 id="第-1-題-9">第 1 題</h3>
-<div class="sourceCode" id="cb127"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hi():</span>
-<span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;嗨，歡迎你&quot;</span>)</span>
-<span id="cb127-3"><a href="#cb127-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb127-4"><a href="#cb127-4" aria-hidden="true" tabindex="-1"></a>say_hi()</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hi():</span>
+<span id="cb137-2"><a href="#cb137-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;嗨，歡迎你&quot;</span>)</span>
+<span id="cb137-3"><a href="#cb137-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-4"><a href="#cb137-4" aria-hidden="true" tabindex="-1"></a>say_hi()</span></code></pre></div>
 <p>解析：先用 <code>def</code> 定義函式，再主動呼叫它。</p>
 <h3 id="第-2-題-9">第 2 題</h3>
-<div class="sourceCode" id="cb128"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_name(name):</span>
-<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎你，&quot;</span> <span class="op">+</span> name)</span>
-<span id="cb128-3"><a href="#cb128-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb128-4"><a href="#cb128-4" aria-hidden="true" tabindex="-1"></a>show_name(<span class="st">&quot;Amy&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_name(name):</span>
+<span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;歡迎你，&quot;</span> <span class="op">+</span> name)</span>
+<span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-4"><a href="#cb138-4" aria-hidden="true" tabindex="-1"></a>show_name(<span class="st">&quot;Amy&quot;</span>)</span></code></pre></div>
 <p>解析：參數可以讓同一個函式處理不同資料。</p>
 <h3 id="第-3-題-9">第 3 題</h3>
-<div class="sourceCode" id="cb129"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(a, b):</span>
-<span id="cb129-2"><a href="#cb129-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb129-3"><a href="#cb129-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-4"><a href="#cb129-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add_numbers(<span class="dv">3</span>, <span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(a, b):</span>
+<span id="cb139-2"><a href="#cb139-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb139-3"><a href="#cb139-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-4"><a href="#cb139-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add_numbers(<span class="dv">3</span>, <span class="dv">5</span>))</span></code></pre></div>
 <p>解析：如果希望把結果交回外面使用，就可以用 <code>return</code>。</p>
 <h3 id="第-4-題-7">第 4 題</h3>
-<div class="sourceCode" id="cb130"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_adult(age):</span>
-<span id="cb130-2"><a href="#cb130-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
-<span id="cb130-3"><a href="#cb130-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;成年&quot;</span>)</span>
-<span id="cb130-4"><a href="#cb130-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb130-5"><a href="#cb130-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;未成年&quot;</span>)</span>
-<span id="cb130-6"><a href="#cb130-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb130-7"><a href="#cb130-7" aria-hidden="true" tabindex="-1"></a>is_adult(<span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_adult(age):</span>
+<span id="cb140-2"><a href="#cb140-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
+<span id="cb140-3"><a href="#cb140-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;成年&quot;</span>)</span>
+<span id="cb140-4"><a href="#cb140-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb140-5"><a href="#cb140-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;未成年&quot;</span>)</span>
+<span id="cb140-6"><a href="#cb140-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb140-7"><a href="#cb140-7" aria-hidden="true" tabindex="-1"></a>is_adult(<span class="dv">20</span>)</span></code></pre></div>
 <p>解析：這題把函式和條件判斷結合在一起，是很好的總複習。</p>
 <h3 id="第-5-題-6">第 5 題</h3>
 <p>參考答案：因為函式可以減少重複程式碼，讓程式更整齊，也更容易修改和重複利用。</p>
@@ -1952,6 +2077,6 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a 
 <p>你現在知道： - 函式可以把一段功能包起來重複使用 - <code>def</code>
 用來定義函式 - 函式定義後還需要呼叫 - 參數可以讓函式更有彈性 -
 <code>return</code> 可以把結果傳回去</p>
-<p>到這裡，你已經完成從 Python 基礎到 Function 的核心入門內容。</p>
+<p>到這裡，你已經完成從 Python 基礎到函式的核心入門內容。</p>
 </body>
 </html>
