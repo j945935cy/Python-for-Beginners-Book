@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">運算與比較示意圖</title>
+  <desc id="desc">顯示運算子可以用來計算數值，也可以用來比較大小，得到 True 或 False。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 20; ry: 20; }
+      .calc { fill: #eff6ff; }
+      .compare { fill: #ecfdf5; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 22px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 600 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="320" rx="28" ry="28"/>
+  <text class="title" x="480" y="52" text-anchor="middle">運算子可以拿來計算，也可以拿來比較</text>
+  <rect class="panel calc" x="90" y="90" width="320" height="170"/>
+  <rect class="panel compare" x="550" y="90" width="320" height="170"/>
+  <text class="title" x="250" y="128" text-anchor="middle">計算</text>
+  <text class="text" x="250" y="168" text-anchor="middle">10 + 3 = 13</text>
+  <text class="text" x="250" y="206" text-anchor="middle">10 // 3 = 3</text>
+  <text class="small" x="250" y="238" text-anchor="middle">得到新的數值結果</text>
+  <text class="title" x="710" y="128" text-anchor="middle">比較</text>
+  <text class="text" x="710" y="168" text-anchor="middle">75 &gt; 60 → True</text>
+  <text class="text" x="710" y="206" text-anchor="middle">3 == 4 → False</text>
+  <text class="small" x="710" y="238" text-anchor="middle">得到成立或不成立</text>
+</svg>

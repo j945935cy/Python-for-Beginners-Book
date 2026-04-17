@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">字串處理示意圖</title>
+  <desc id="desc">顯示同一段字串可以用不同方法改變大小寫，也可以用 len 計算長度。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .source { fill: #ffffff; stroke: #94a3b8; stroke-width: 3; rx: 20; ry: 20; }
+      .tool { fill: #eff6ff; stroke: #60a5fa; stroke-width: 3; rx: 18; ry: 18; }
+      .out { fill: #ecfdf5; stroke: #34d399; stroke-width: 3; rx: 18; ry: 18; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 20px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 600 17px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .line { stroke: #2563eb; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="320" rx="28" ry="28"/>
+  <text class="title" x="480" y="46" text-anchor="middle">同一段字串可以做不同處理</text>
+  <rect class="source" x="360" y="78" width="240" height="60"/>
+  <text class="text" x="480" y="116" text-anchor="middle">"python book"</text>
+  <rect class="tool" x="120" y="190" width="180" height="70"/>
+  <rect class="tool" x="390" y="190" width="180" height="70"/>
+  <rect class="tool" x="660" y="190" width="180" height="70"/>
+  <text class="text" x="210" y="232" text-anchor="middle">upper()</text>
+  <text class="text" x="480" y="232" text-anchor="middle">title()</text>
+  <text class="text" x="750" y="232" text-anchor="middle">len()</text>
+  <text class="small" x="210" y="286" text-anchor="middle">PYTHON BOOK</text>
+  <text class="small" x="480" y="286" text-anchor="middle">Python Book</text>
+  <text class="small" x="750" y="286" text-anchor="middle">11 個字元</text>
+  <path class="line" d="M430 138 L260 190"/>
+  <path class="line" d="M480 138 V190"/>
+  <path class="line" d="M530 138 L700 190"/>
+</svg>

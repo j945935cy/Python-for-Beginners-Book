@@ -21,7 +21,8 @@
 
 ## 專案結構
 - `src/`：書籍章節 Markdown
-- `docs/`：網站版輸出與靜態資源
+- `assets/`：網站版使用的靜態資源
+- `docs/`：補充文件與校稿資料
 - `meta/`：書籍中繼資料與封面
 - `style/`：HTML 與 EPUB 使用的樣式
 - `scripts/`：建置與預覽腳本
@@ -76,6 +77,6 @@ pandoc --version
 ```
 
 ## 補充說明
-- `docs/index.html` 可作為網站入口頁
+- 根目錄的 `index.html` 是網站入口頁
 - `src/` 內的 Markdown 是整本書的主要來源
 - 書籍語言設定為 `zh-TW`

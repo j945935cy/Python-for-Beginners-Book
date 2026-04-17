@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">函式像小機器的示意圖</title>
+  <desc id="desc">顯示資料進入函式，小機器進行處理後，再輸出結果。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .input { fill: #eff6ff; stroke: #60a5fa; stroke-width: 3; rx: 18; ry: 18; }
+      .machine { fill: #1d4ed8; stroke: #1e40af; stroke-width: 4; rx: 28; ry: 28; }
+      .output { fill: #ecfdf5; stroke: #34d399; stroke-width: 3; rx: 18; ry: 18; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .light { fill: #ffffff; font: 700 24px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 20px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .line { stroke: #2563eb; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="300" rx="28" ry="28"/>
+  <text class="title" x="480" y="48" text-anchor="middle">函式可以把資料拿進來處理，再把結果送出去</text>
+  <rect class="input" x="70" y="110" width="220" height="90"/>
+  <text class="text" x="180" y="148" text-anchor="middle">輸入資料</text>
+  <text class="text" x="180" y="178" text-anchor="middle">例如：x = 10, y = 5</text>
+  <rect class="machine" x="350" y="82" width="260" height="146"/>
+  <text class="light" x="480" y="140" text-anchor="middle">函式</text>
+  <text class="light" x="480" y="176" text-anchor="middle">add_numbers(x, y)</text>
+  <rect class="output" x="670" y="110" width="220" height="90"/>
+  <text class="text" x="780" y="148" text-anchor="middle">輸出結果</text>
+  <text class="text" x="780" y="178" text-anchor="middle">例如：15</text>
+  <path class="line" d="M295 155 H340"/>
+  <path class="line" d="M325 138 L340 155 L325 172"/>
+  <path class="line" d="M615 155 H660"/>
+  <path class="line" d="M645 138 L660 155 L645 172"/>
+</svg>

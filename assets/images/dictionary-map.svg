@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">字典鍵值對示意圖</title>
+  <desc id="desc">顯示字典中的鍵會對應到不同的值，例如 name 對應 Amy。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .key { fill: #eff6ff; stroke: #60a5fa; stroke-width: 3; rx: 18; ry: 18; }
+      .value { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 18; ry: 18; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 22px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .line { stroke: #2563eb; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="320" rx="28" ry="28"/>
+  <text class="title" x="480" y="50" text-anchor="middle">字典是用「鍵」找到對應的「值」</text>
+  <rect class="key" x="110" y="90" width="180" height="54"/>
+  <rect class="key" x="110" y="160" width="180" height="54"/>
+  <rect class="key" x="110" y="230" width="180" height="54"/>
+  <rect class="value" x="670" y="90" width="180" height="54"/>
+  <rect class="value" x="670" y="160" width="180" height="54"/>
+  <rect class="value" x="670" y="230" width="180" height="54"/>
+  <text class="text" x="200" y="124" text-anchor="middle">name</text>
+  <text class="text" x="200" y="194" text-anchor="middle">age</text>
+  <text class="text" x="200" y="264" text-anchor="middle">score</text>
+  <text class="text" x="760" y="124" text-anchor="middle">Amy</text>
+  <text class="text" x="760" y="194" text-anchor="middle">18</text>
+  <text class="text" x="760" y="264" text-anchor="middle">95</text>
+  <path class="line" d="M290 117 H650"/>
+  <path class="line" d="M290 187 H650"/>
+  <path class="line" d="M290 257 H650"/>
+</svg>

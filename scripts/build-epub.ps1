@@ -42,7 +42,7 @@ New-Item -ItemType Directory -Force -Path "output/epub" | Out-Null
 
 & $pandocCommand.Source @chapters `
   --metadata-file="meta/metadata.yaml" `
-  --resource-path=".;docs" `
+  --resource-path="." `
   --toc `
   --css="style/ebook.css" `
   --epub-cover-image="meta/cover.png" `

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">輸入輸出流程圖</title>
+  <desc id="desc">顯示使用者輸入資料，程式接收處理，再把結果輸出到畫面的流程。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .card { fill: #ffffff; stroke: #bfdbfe; stroke-width: 3; rx: 22; ry: 22; }
+      .accent1 { fill: #eff6ff; }
+      .accent2 { fill: #ecfeff; }
+      .accent3 { fill: #eef2ff; }
+      .title { fill: #0f172a; font: 700 28px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 500 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 500 16px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .arrow { stroke: #2563eb; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="280" rx="28" ry="28"/>
+  <rect class="card accent1" x="40" y="60" width="240" height="150" rx="22" ry="22"/>
+  <rect class="card accent2" x="360" y="60" width="240" height="150" rx="22" ry="22"/>
+  <rect class="card accent3" x="680" y="60" width="240" height="150" rx="22" ry="22"/>
+  <text class="title" x="160" y="110" text-anchor="middle">使用者輸入</text>
+  <text class="text" x="160" y="145" text-anchor="middle">輸入名字、年齡、分數</text>
+  <text class="small" x="160" y="175" text-anchor="middle">例如：input()</text>
+  <text class="title" x="480" y="110" text-anchor="middle">程式接收與處理</text>
+  <text class="text" x="480" y="145" text-anchor="middle">存進變數、轉成整數、計算</text>
+  <text class="small" x="480" y="175" text-anchor="middle">例如：name = ..., age = int(...)</text>
+  <text class="title" x="800" y="110" text-anchor="middle">結果輸出</text>
+  <text class="text" x="800" y="145" text-anchor="middle">把結果顯示在畫面上</text>
+  <text class="small" x="800" y="175" text-anchor="middle">例如：print()</text>
+  <path class="arrow" d="M285 135 H340"/>
+  <path class="arrow" d="M325 118 L340 135 L325 152"/>
+  <path class="arrow" d="M605 135 H660"/>
+  <path class="arrow" d="M645 118 L660 135 L645 152"/>
+</svg>

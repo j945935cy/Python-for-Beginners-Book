@@ -38,19 +38,19 @@ $chapters = @(
     "src/10-function.md"
 )
 
-New-Item -ItemType Directory -Force -Path "docs" | Out-Null
+New-Item -ItemType Directory -Force -Path "assets" | Out-Null
 New-Item -ItemType Directory -Force -Path "output/html" | Out-Null
 
 & $pandocCommand.Source @chapters `
   --metadata-file="meta/metadata.yaml" `
-  --resource-path=".;docs" `
+  --resource-path="." `
   --standalone `
   --toc `
   --css="assets/css/site.css" `
-  -o "docs/index.html"
+  -o "index.html"
 
-Copy-Item "docs/index.html" "output/html/index.html" -Force
+Copy-Item "index.html" "output/html/index.html" -Force
 New-Item -ItemType Directory -Force -Path "output/html/assets" | Out-Null
-Copy-Item "docs/assets/*" "output/html/assets" -Recurse -Force
+Copy-Item "assets/*" "output/html/assets" -Recurse -Force
 
-Write-Host "HTML build completed: docs/index.html and output/html/index.html"
+Write-Host "HTML build completed: index.html and output/html/index.html"

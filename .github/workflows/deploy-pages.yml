@@ -32,13 +32,21 @@ jobs:
         shell: pwsh
         run: ./scripts/build-html.ps1
 
+      - name: Prepare Pages Files
+        shell: bash
+        run: |
+          mkdir -p .site
+          cp index.html .site/index.html
+          if [ -f 404.html ]; then cp 404.html .site/404.html; fi
+          cp -R assets .site/assets
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: .site
 
       - name: Deploy Pages
         id: deployment
