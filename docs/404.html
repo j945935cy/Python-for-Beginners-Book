@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>頁面不存在</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+      background: linear-gradient(180deg, #f6f9ff 0%, #eef4ff 100%);
+      color: #172033;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    main {
+      max-width: 560px;
+      padding: 32px;
+      border-radius: 24px;
+      background: #ffffff;
+      border: 1px solid #dbe4f0;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      text-align: center;
+    }
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+  <script>
+    if (location.pathname.endsWith("/docs/index.html")) {
+      window.location.replace(location.pathname.replace("/docs/index.html", "/"));
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>找不到這個頁面</h1>
+    <p>如果你要進入書籍首頁，請改用下面這個入口：</p>
+    <p><a href="./index.html">回到書籍首頁</a></p>
+  </main>
+</body>
+</html>
