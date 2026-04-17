@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>網頁版電子書模板｜修正版</title>
+  <style>
+    :root {
+      --bg: #f3f7ff;
+      --surface: #ffffff;
+      --surface-2: #f8fbff;
+      --text: #172033;
+      --muted: #5f6b7d;
+      --primary: #1d4ed8;
+      --primary-soft: #e0ecff;
+      --accent: #0ea5e9;
+      --border: #dbe4f0;
+      --quote: #fff5cf;
+      --tip: #ecfeff;
+      --exercise: #f5f3ff;
+      --code-bg: #0f172a;
+      --code-text: #e5eefc;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --content-width: 70ch;
+      --sidebar-width: 270px;
+      --space-1: 0.5rem;
+      --space-2: 0.75rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2rem;
+      --space-6: 3rem;
+      --fs-body: clamp(1rem, 0.95rem + 0.22vw, 1.08rem);
+      --fs-small: 0.94rem;
+      --fs-h1: clamp(2.2rem, 1.8rem + 1.8vw, 3.4rem);
+      --fs-h2: clamp(1.55rem, 1.28rem + 0.95vw, 2.15rem);
+      --fs-h3: clamp(1.16rem, 1.02rem + 0.55vw, 1.42rem);
+      --lh-body: 1.92;
+      --header-height: 68px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.09), transparent 24%),
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 26%),
+        linear-gradient(180deg, #f6f9ff 0%, #eef4ff 100%);
+      color: var(--text);
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+    }
+
+    body.dark {
+      --bg: #0b1220;
+      --surface: #0f172a;
+      --surface-2: #111c33;
+      --text: #e5e7eb;
+      --muted: #97a3b8;
+      --primary: #60a5fa;
+      --primary-soft: rgba(96, 165, 250, 0.16);
+      --accent: #f8fafc;
+      --border: #22304a;
+      --quote: rgba(245, 158, 11, 0.16);
+      --tip: rgba(34, 211, 238, 0.14);
+      --exercise: rgba(139, 92, 246, 0.14);
+      --code-bg: #020617;
+      --code-text: #dbeafe;
+      --shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+      --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.22);
+      background:
+        radial-gradient(circle at top left, rgba(29, 78, 216, 0.16), transparent 24%),
+        linear-gradient(180deg, #08111f 0%, #0b1220 100%);
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    code { font-family: "Cascadia Code", "Consolas", monospace; }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      z-index: 1000;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      height: var(--header-height);
+      padding: 0 1rem;
+      background: color-mix(in srgb, var(--surface) 90%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: var(--shadow-soft);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.68rem 1rem;
+      cursor: pointer;
+      font: inherit;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-soft);
+      text-decoration: none;
+    }
+
+    .layout {
+      width: min(1380px, calc(100% - 2rem));
+      margin: 1.25rem auto 3rem;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: calc(var(--header-height) + 1rem);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      max-height: calc(100vh - var(--header-height) - 2rem);
+      overflow: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      margin: 0 0 0.85rem;
+      letter-spacing: 0.04em;
+    }
+
+    .toc {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .toc a {
+      display: block;
+      padding: 0.82rem 0.95rem;
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    body.dark .toc a {
+      background: linear-gradient(180deg, rgba(17, 28, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      background: var(--primary-soft);
+      border-color: color-mix(in srgb, var(--primary) 20%, var(--border));
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .sidebar-card {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .sidebar-card p {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .hero,
+    .chapter,
+    .end-nav {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(1.7rem, 1rem + 2vw, 3.2rem);
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(29, 78, 216, 0.78)),
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      color: #ffffff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -90px -90px auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 68%);
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #dbeafe;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: var(--fs-h1);
+      line-height: 1.12;
+      max-width: 15ch;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      max-width: 60ch;
+      color: rgba(255,255,255,0.85);
+      margin: 1rem 0 0;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .chip {
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      color: rgba(255,255,255,0.84);
+      background: rgba(255,255,255,0.08);
+      font-size: 0.92rem;
+    }
+
+    .chapter {
+      padding: clamp(1.25rem, 0.85rem + 1.5vw, 2.3rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .chapter-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+    }
+
+    .chapter-number {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.04em;
+    }
+
+    .chapter h2 {
+      margin: 0;
+      font-size: var(--fs-h2);
+      line-height: 1.25;
+    }
+
+    .chapter-subtitle {
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    .prose {
+      max-width: var(--content-width);
+    }
+
+    .prose p,
+    .prose ul,
+    .prose ol,
+    .prose blockquote,
+    .prose pre,
+    .prose table,
+    .prose .callout,
+    .prose .figure {
+      margin: 1.15rem 0;
+    }
+
+    .prose h3 {
+      font-size: var(--fs-h3);
+      margin: 2.1rem 0 0.8rem;
+      line-height: 1.35;
+    }
+
+    .prose h4 {
+      margin: 1.5rem 0 0.65rem;
+      font-size: 1.05rem;
+    }
+
+    .prose p,
+    .prose li {
+      color: var(--text);
+    }
+
+    .prose ul,
+    .prose ol {
+      padding-left: 1.4rem;
+    }
+
+    .prose li + li {
+      margin-top: 0.45rem;
+    }
+
+    .lead {
+      font-size: 1.08em;
+      color: color-mix(in srgb, var(--text) 88%, var(--muted));
+    }
+
+    .callout {
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .callout.quote { background: var(--quote); }
+    .callout.tip { background: var(--tip); }
+    .callout.exercise { background: var(--exercise); }
+
+    blockquote {
+      margin-left: 0;
+      padding: 0.95rem 1rem 0.95rem 1.1rem;
+      border-left: 4px solid var(--primary);
+      background: var(--surface-2);
+      border-radius: 0 14px 14px 0;
+      color: color-mix(in srgb, var(--text) 90%, var(--muted));
+    }
+
+    .figure {
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .figure-visual {
+      aspect-ratio: 16 / 8;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 14%, var(--surface-2)), var(--surface));
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--muted);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .figure figcaption {
+      padding: 0.9rem 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    pre {
+      margin: 0;
+      background: var(--code-bg);
+      color: var(--code-text);
+      border-radius: 16px;
+      padding: 1rem;
+      overflow: auto;
+      border: 1px solid color-mix(in srgb, var(--code-bg) 75%, white);
+      line-height: 1.7;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .code-block {
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.8rem;
+      right: 0.8rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    th, td {
+      padding: 0.85rem 0.9rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--surface-2);
+      font-weight: 700;
+    }
+
+    .end-nav {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .end-nav a {
+      flex: 1;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--surface-2);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .end-nav small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .backdrop {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: calc(var(--header-height) + 0.5rem);
+        left: 0.75rem;
+        width: min(88vw, 360px);
+        max-height: calc(100vh - var(--header-height) - 1rem);
+        z-index: 950;
+        transform: translateX(-120%);
+        transition: transform 0.25s ease;
+      }
+
+      body.sidebar-open .sidebar {
+        transform: translateX(0);
+      }
+
+      .backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.35);
+        z-index: 940;
+      }
+
+      body.sidebar-open .backdrop {
+        display: block;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .layout {
+        width: min(100% - 1rem, 1400px);
+        margin-top: 0.75rem;
+      }
+
+      .topbar {
+        padding: 0 0.75rem;
+      }
+
+      .brand-text span {
+        display: none;
+      }
+
+      .hero,
+      .chapter,
+      .end-nav {
+        border-radius: 20px;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        text-wrap: pretty;
+      }
+
+      .topbar-actions .btn:not(.menu-toggle) {
+        padding: 0.65rem 0.85rem;
+      }
+
+      .end-nav {
+        flex-direction: column;
+      }
+
+      .end-nav a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="backdrop" id="backdrop"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-badge">書</div>
+      <div class="brand-text">
+        <strong>網頁版電子書模板｜修正版</strong>
+        <span>版型更穩、標題更順、目錄更精簡</span>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="btn menu-toggle" id="menuToggle">目錄</button>
+      <button class="btn" id="fontToggle">字體放大</button>
+      <button class="btn" id="themeToggle">深色模式</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h2>章節目錄</h2>
+      <nav>
+        <ul class="toc" id="toc">
+          <li><a href="#chapter-1">第 1 章　為什麼要做成網頁版電子書</a></li>
+          <li><a href="#chapter-2">第 2 章　閱讀介面的關鍵原則</a></li>
+          <li><a href="#chapter-3">第 3 章　程式教學內容怎麼排</a></li>
+          <li><a href="#chapter-4">第 4 章　如何快速替換成自己的內容</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>修正重點</strong>
+        <p>這個版本保留原本的單檔模板結構，但把封面標題、目錄層級、卡片留白、手機版閱讀與教學資訊區塊做得更穩定。</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <div class="hero-kicker">HTML + CSS + JavaScript</div>
+        <h1>適合長文閱讀的網頁版電子書模板</h1>
+        <p>這份修正版以「長時間閱讀舒服、章節清楚、教學內容穩定、手機也順」為核心。適合教材網站、電子書、長篇教學內容與技術筆記集。</p>
+        <div class="hero-meta">
+          <span class="chip">單檔模板</span>
+          <span class="chip">章節式閱讀</span>
+          <span class="chip">深色模式</span>
+          <span class="chip">閱讀進度條</span>
+        </div>
+      </section>
+
+      <article class="chapter" id="chapter-1">
+        <header class="chapter-header">
+          <div class="chapter-number">Chapter 1</div>
+          <h2>為什麼要做成網頁版電子書</h2>
+          <div class="chapter-subtitle">不是做一個普通網站，而是做一個可以長時間閱讀的介面。</div>
+        </header>
+
+        <div class="prose">
+          <p class="lead">很多人把電子書網站做成首頁式排版，畫面很漂亮，但一旦文章變長，閱讀體驗就開始下降。真正好的網頁版電子書，重點不是炫，而是讓讀者願意一直看下去。</p>
+
+          <p>因此，這份模板把焦點放在三件事：第一是文字閱讀的舒適度，第二是章節結構的清楚程度，第三是技術內容的呈現品質。尤其如果您的內容有程式碼、表格、重點框，版型就更需要穩定。</p>
+
+          <div class="callout quote">
+            <strong>重點提醒</strong>
+            電子書頁面應該優先考慮可讀性，而不是一開始就追求大量動態效果。
+          </div>
+
+          <blockquote>
+            好的閱讀介面，不是讓讀者注意到設計，而是讓讀者忘記設計的存在。
+          </blockquote>
+
+          <figure class="figure">
+            <div class="figure-visual">可替換成封面圖、章節插圖或流程圖</div>
+            <figcaption>圖 1：這裡可以放書封、概念圖、章節主視覺。</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="chapter" id="chapter-2">
+        <header class="chapter-header">
+          <div class="chapter-number">Chapter 2</div>
+          <h2>閱讀介面的關鍵原則</h2>
+          <div class="chapter-subtitle">字級、行高、欄寬、留白，都會直接影響讀者是否想繼續看。</div>
+        </header>
+
+        <div class="prose">
+          <h3>1. 文字欄寬不要太寬</h3>
+          <p>長文如果鋪滿整個桌面螢幕，眼睛來回掃描會很累。這個模板已經把主要內文寬度控制在適合閱讀的範圍內。</p>
+
+          <h3>2. 標題階層要明顯</h3>
+          <p>章節名稱、小節名稱、內文段落，必須有清楚的視覺差異。這不只是美觀問題，也是理解效率問題。</p>
+
+          <div class="callout tip">
+            <strong>教學內容建議</strong>
+            如果您的書是教學型內容，可以固定每節都有：概念說明、範例、常見錯誤、練習題。讀者會更容易建立閱讀節奏。
+          </div>
+
+          <h3>3. 表格與整理區要一致</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>元素</th>
+                <th>用途</th>
+                <th>建議</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>章節卡片</td>
+                <td>區分內容區塊</td>
+                <td>保持圓角、邊框、陰影一致</td>
+              </tr>
+              <tr>
+                <td>重點框</td>
+                <td>提示重要內容</td>
+                <td>用淡色背景，不要太刺眼</td>
+              </tr>
+              <tr>
+                <td>程式碼區塊</td>
+                <td>顯示範例程式</td>
+                <td>深色底、可橫向捲動、可複製</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="chapter" id="chapter-3">
+        <header class="chapter-header">
+          <div class="chapter-number">Chapter 3</div>
+          <h2>程式教學內容怎麼排</h2>
+          <div class="chapter-subtitle">技術書最常失敗的地方，就是程式碼好擠、說明太散、範例不集中。</div>
+        </header>
+
+        <div class="prose">
+          <p>如果是資訊教材，建議每個小節都用一致節奏呈現，例如：先講概念，再放程式碼，再補說明，最後給一題小練習。這樣讀者會知道每一節怎麼讀，理解也會更穩定。</p>
+
+          <h3>範例：簡單 JavaScript 互動</h3>
+          <div class="code-block">
+            <button class="copy-btn" data-copy-target="code-sample">複製</button>
+            <pre><code id="code-sample">const button = document.querySelector('#themeToggle');
+button.addEventListener('click', () =&gt; {
+  document.body.classList.toggle('dark');
+});</code></pre>
+          </div>
+
+          <div class="callout exercise">
+            <strong>練習題</strong>
+            請把上方按鈕功能改成「切換字體大小」，並思考：為什麼閱讀介面通常需要字體大小切換功能？
+          </div>
+
+          <h3>常見錯誤</h3>
+          <ul>
+            <li>一個小節塞太多程式碼，讀者不知重點在哪。</li>
+            <li>程式碼與文字說明距離太遠，來回對照很累。</li>
+            <li>所有提醒都用同一種框，視覺上沒有優先順序。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="chapter" id="chapter-4">
+        <header class="chapter-header">
+          <div class="chapter-number">Chapter 4</div>
+          <h2>如何快速替換成自己的內容</h2>
+          <div class="chapter-subtitle">先固定模板，再批量替換章節，效率最高。</div>
+        </header>
+
+        <div class="prose">
+          <h3>您只要改這些地方</h3>
+          <ol>
+            <li>修改頁面標題與書名。</li>
+            <li>把左側目錄連結改成您的章節。</li>
+            <li>複製一份 <code>&lt;article class="chapter"&gt;</code> 區塊，作為新章節。</li>
+            <li>把示意內容換成您的正文、程式碼、表格與練習。</li>
+          </ol>
+
+          <h3>適合再擴充的功能</h3>
+          <ul>
+            <li>全文搜尋</li>
+            <li>章節折疊</li>
+            <li>字體切換</li>
+            <li>註解功能</li>
+            <li>多頁章節拆分</li>
+          </ul>
+
+          <div class="callout tip">
+            <strong>實務建議</strong>
+            如果您之後要交給 Codex 大量產生章節，請先把這份模板當成母版，再要求它「依母版格式新增章節」，會比每次重做整頁穩定很多。
+          </div>
+        </div>
+      </article>
+
+      <nav class="end-nav">
+        <a href="#chapter-1">
+          <small>回到開頭</small>
+          為什麼要做成網頁版電子書
+        </a>
+        <a href="#chapter-4">
+          <small>最後一章</small>
+          如何快速替換成自己的內容
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <script>
+    const progressBar = document.getElementById('progressBar');
+    const themeToggle = document.getElementById('themeToggle');
+    const fontToggle = document.getElementById('fontToggle');
+    const menuToggle = document.getElementById('menuToggle');
+    const backdrop = document.getElementById('backdrop');
+    const tocLinks = [...document.querySelectorAll('#toc a')];
+    const chapters = [...document.querySelectorAll('.chapter')];
+
+    function updateProgressBar() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    function updateActiveToc() {
+      const offset = window.scrollY + 140;
+      let currentId = '';
+
+      chapters.forEach((chapter) => {
+        if (offset >= chapter.offsetTop) {
+          currentId = chapter.id;
+        }
+      });
+
+      tocLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem('ebook-theme-fixed', isDark ? 'dark' : 'light');
+      themeToggle.textContent = isDark ? '淺色模式' : '深色模式';
+    }
+
+    function initTheme() {
+      const storedTheme = localStorage.getItem('ebook-theme-fixed');
+      if (storedTheme === 'dark') {
+        document.body.classList.add('dark');
+        themeToggle.textContent = '淺色模式';
+      }
+    }
+
+    function toggleFontSize() {
+      const root = document.documentElement;
+      const current = root.dataset.fontScale || 'normal';
+      if (current === 'normal') {
+        root.style.fontSize = '18px';
+        root.dataset.fontScale = 'large';
+        fontToggle.textContent = '字體還原';
+      } else {
+        root.style.fontSize = '16px';
+        root.dataset.fontScale = 'normal';
+        fontToggle.textContent = '字體放大';
+      }
+    }
+
+    function openSidebar() {
+      document.body.classList.add('sidebar-open');
+    }
+
+    function closeSidebar() {
+      document.body.classList.remove('sidebar-open');
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    fontToggle.addEventListener('click', toggleFontSize);
+    menuToggle.addEventListener('click', openSidebar);
+    backdrop.addEventListener('click', closeSidebar);
+
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeSidebar();
+      });
+    });
+
+    document.querySelectorAll('.copy-btn').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const targetId = button.dataset.copyTarget;
+        const code = document.getElementById(targetId)?.innerText || '';
+        try {
+          await navigator.clipboard.writeText(code);
+          const oldText = button.textContent;
+          button.textContent = '已複製';
+          setTimeout(() => button.textContent = oldText, 1200);
+        } catch (err) {
+          button.textContent = '複製失敗';
+          setTimeout(() => button.textContent = '複製', 1200);
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      updateProgressBar();
+      updateActiveToc();
+    });
+
+    window.addEventListener('load', () => {
+      initTheme();
+      updateProgressBar();
+      updateActiveToc();
+    });
+  </script>
+</body>
+</html>

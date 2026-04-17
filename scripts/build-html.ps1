@@ -49,6 +49,13 @@ New-Item -ItemType Directory -Force -Path "output/html" | Out-Null
   --css="assets/css/site.css" `
   -o "index.html"
 
+$html = Get-Content "index.html" -Raw
+if ($html -notmatch 'assets/js/site\.js') {
+    $scriptTag = '  <script src="assets/js/site.js"></script>' + [Environment]::NewLine + '</body>'
+    $html = $html -replace '</body>', $scriptTag
+    Set-Content "index.html" $html -Encoding UTF8
+}
+
 Copy-Item "index.html" "output/html/index.html" -Force
 New-Item -ItemType Directory -Force -Path "output/html/assets" | Out-Null
 Copy-Item "assets/*" "output/html/assets" -Recurse -Force
