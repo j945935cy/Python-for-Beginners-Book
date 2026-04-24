@@ -45,7 +45,6 @@ New-Item -ItemType Directory -Force -Path "output/epub" | Out-Null
   --resource-path="." `
   --toc `
   --css="style/ebook.css" `
-  --epub-cover-image="meta/cover.png" `
   -o "output/epub/python-for-beginners.epub"
 
 Write-Host "EPUB build completed: output/epub/python-for-beginners.epub"
