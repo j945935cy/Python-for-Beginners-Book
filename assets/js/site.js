@@ -118,6 +118,7 @@ function ensureLayout(body, titleHeader, toc) {
   main.className = "site-main";
 
   titleHeader.classList.add("site-hero");
+  main.append(titleHeader);
 
   const article = document.createElement("article");
   article.className = "book-article";
@@ -126,8 +127,6 @@ function ensureLayout(body, titleHeader, toc) {
 
   main.append(article);
   layout.append(sidebar, main);
-  
-  body.append(titleHeader);
   body.append(layout);
 
   return { sidebar, content: main, article };
