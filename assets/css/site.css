@@ -191,7 +191,7 @@ body.dark .site-topbar {
 
 .site-layout {
   width: min(1120px, calc(100% - 2rem));
-  margin: 1rem auto 3rem;
+  margin: 3rem auto 5rem;
   display: grid;
   grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
   gap: 1.25rem;
@@ -208,7 +208,6 @@ body.dark .site-topbar {
 
 .site-sidebar-panel,
 .sidebar-card,
-.site-hero,
 .book-article {
   background: var(--surface-2);
   border: 1px solid var(--border);
@@ -218,7 +217,6 @@ body.dark .site-topbar {
 
 body.dark .site-sidebar-panel,
 body.dark .sidebar-card,
-body.dark .site-hero,
 body.dark .book-article {
   border: 1px solid var(--border-solid);
 }
@@ -319,28 +317,23 @@ nav#TOC ul ul {
   position: relative;
   overflow: hidden;
   margin: 0;
-  min-height: 380px;
-  padding: clamp(3rem, 2rem + 4vw, 5rem);
-  border-radius: var(--radius) !important;
+  width: 100%;
+  min-height: 50vh;
+  padding: clamp(6rem, 5rem + 5vw, 10rem) 1.5rem 4rem;
+  border-radius: 0;
   transform: translateZ(0);
-  background: radial-gradient(circle at center top, #2997ff 0%, #0071e3 60%, #004499 100%);
-  color: #ffffff;
+  background: transparent;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .site-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../images/cover.png") center/cover no-repeat;
-  opacity: 0.1;
-  mix-blend-mode: overlay;
-  pointer-events: none;
+  display: none;
 }
 
 .site-hero::after {
@@ -358,20 +351,21 @@ nav#TOC ul ul {
 
 .site-hero-kicker {
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 h1.title {
   margin: 0;
-  font-size: clamp(2.5rem, 2rem + 2.5vw, 4rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 2.5rem + 3.5vw, 5.5rem);
+  font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   max-width: 20ch;
   text-wrap: balance;
+  color: var(--text);
 }
 
 p.author {
@@ -379,18 +373,18 @@ p.author {
   margin: 1rem 0 0;
   padding: 0.52rem 1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: #e0f2fe;
-  font-weight: 700;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
 }
 
 .site-hero-lead {
-  max-width: 32rem;
+  max-width: 34rem;
   margin: 0.5rem auto 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  line-height: 1.5;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1.6;
   font-weight: 400;
 }
 
