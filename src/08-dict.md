@@ -246,7 +246,7 @@ print(book)
 
 ### 第 4 題
 ```python
-book["publisher"] = "自出版"
+book["publisher"] = "Happy Ebook 出版"
 print(book)
 ```
 解析：如果鍵原本不存在，這樣寫就會新增一筆資料。

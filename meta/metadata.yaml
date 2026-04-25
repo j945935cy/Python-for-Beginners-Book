@@ -4,7 +4,7 @@ author:
 language: "zh-TW"
 rights: "All rights reserved."
 description: "一本給初學者的 Python 入門教材，內容涵蓋基礎語法到函式。"
-publisher: "自出版"
+publisher: "Happy Ebook 出版"
 identifier: "python-for-beginners-book"
 cover-image: "meta/cover.png"
 toc: true
