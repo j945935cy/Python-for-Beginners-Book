@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">Python 是人類與電腦溝通的橋樑</title>
+  <desc id="desc">顯示人類透過 Python 將程式碼翻譯成電腦看得懂的指令，並在螢幕上顯示結果。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fbff; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 3; rx: 20; ry: 20; }
+      .fill-human { fill: #dbeafe; }
+      .fill-python { fill: #fef3c7; }
+      .fill-computer { fill: #dcfce7; }
+      .title { fill: #0f172a; font: 700 26px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .text { fill: #334155; font: 600 22px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .small { fill: #475569; font: 600 18px 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; }
+      .code { fill: #2563eb; font: 700 18px 'Courier New', monospace; }
+      .arrow { fill: #94a3b8; }
+    </style>
+  </defs>
+  
+  <!-- 背景框 -->
+  <rect class="bg" width="960" height="280" rx="28" ry="28"/>
+  <text class="title" x="480" y="52" text-anchor="middle">程式語言是人類與電腦溝通的橋樑</text>
+
+  <!-- 左邊：人類區塊 -->
+  <rect class="box fill-human" x="90" y="90" width="220" height="120"/>
+  <text class="text" x="200" y="136" text-anchor="middle">人類撰寫程式碼</text>
+  <text class="code" x="200" y="176" text-anchor="middle">print("Hello")</text>
+
+  <!-- 箭頭 1 -->
+  <path class="arrow" d="M320,146 L345,146 L345,136 L360,150 L345,164 L345,154 L320,154 Z"/>
+
+  <!-- 中間：Python 翻譯機 -->
+  <rect class="box fill-python" x="370" y="90" width="220" height="120"/>
+  <text class="text" x="480" y="136" text-anchor="middle">Python</text>
+  <text class="small" x="480" y="176" text-anchor="middle">翻譯成電腦懂的指令</text>
+
+  <!-- 箭頭 2 -->
+  <path class="arrow" d="M600,146 L625,146 L625,136 L640,150 L625,164 L625,154 L600,154 Z"/>
+
+  <!-- 右邊：電腦區塊 -->
+  <rect class="box fill-computer" x="650" y="90" width="220" height="120"/>
+  <text class="text" x="760" y="136" text-anchor="middle">電腦執行結果</text>
+  <text class="small" x="760" y="176" text-anchor="middle">螢幕顯示 Hello</text>
+</svg>

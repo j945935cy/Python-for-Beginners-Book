@@ -8,6 +8,8 @@
 ## 概念說明
 Python 是一種語法清楚、容易上手的程式語言，很適合初學者學習。
 
+![程式語言是人類與電腦溝通的橋樑](assets/images/python-intro.svg)
+
 ## 範例程式
 ```python
 print("Hello, Python!")
