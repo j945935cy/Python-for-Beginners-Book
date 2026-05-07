@@ -126,7 +126,11 @@ function ensureLayout(body, titleHeader, toc) {
   let h1Count = 0;
   let cutoffIndex = -1;
   for (let i = 0; i < movableNodes.length; i++) {
-    if (movableNodes[i].tagName === "H1" && movableNodes[i].id) {
+    if (
+      movableNodes[i].tagName === "H1" &&
+      movableNodes[i].id &&
+      /^第\s*\d+\s*章/.test(movableNodes[i].textContent.trim())
+    ) {
       h1Count++;
       if (h1Count === 8) { // Chapter 8 cutoff
         cutoffIndex = i;
