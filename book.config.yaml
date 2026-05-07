@@ -1,0 +1,14 @@
+# Shared defaults for Codex ebook publishing skills.
+# Keep this file flat so PowerShell helpers can read it without extra modules.
+metadata_path: meta/metadata.yaml
+cover_path: meta/cover.png
+chapter_dir: src
+chapter_index: src/index.md
+epub_output: output/epub/python-for-beginners.epub
+html_build_command: npm run build:html
+epub_build_command: npm run build:epub
+pages_workflow: .github/workflows/deploy-pages.yml
+pages_required_files: index.html, assets/css/site.css, assets/js/site.js
+pages_git_add_paths: index.html, output/html, assets, docs, 404.html
+google_books_export_dir: output/google-books
+google_books_language: zh-TW

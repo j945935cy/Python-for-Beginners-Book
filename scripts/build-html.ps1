@@ -51,9 +51,10 @@ New-Item -ItemType Directory -Force -Path "output/html" | Out-Null
 
 $html = Get-Content "index.html" -Raw -Encoding UTF8
 if ($html -notmatch 'assets/js/site\.js') {
-    $scriptTag = '  <script src="assets/js/site.js"></script>' + [Environment]::NewLine + '</body>'
+    $scriptTag = '  <script src="assets/js/site.js"></script>' + "`n" + '</body>'
     $html = $html -replace '</body>', $scriptTag
-    Set-Content "index.html" $html -Encoding UTF8
+    $utf8Bom = New-Object System.Text.UTF8Encoding($true)
+    [System.IO.File]::WriteAllText((Resolve-Path "index.html"), ($html -replace "`r`n", "`n" -replace "`r", "`n"), $utf8Bom)
 }
 
 Copy-Item "index.html" "output/html/index.html" -Force

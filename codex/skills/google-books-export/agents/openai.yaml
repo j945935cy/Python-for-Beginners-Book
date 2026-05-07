@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Books Export"
+  short_description: "Prepare Google Books upload files."
+  default_prompt: "Use $google-books-export to prepare a Google Books-ready EPUB package."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Pages Publisher"
+  short_description: "Publish textbook sites to Pages."
+  default_prompt: "Use $github-pages-publisher to build and publish this textbook site."

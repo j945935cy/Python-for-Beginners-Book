@@ -1,0 +1,4 @@
+interface:
+  display_name: "EPUB Builder"
+  short_description: "Build and validate Pandoc EPUB outputs for Markdown textbooks."
+  default_prompt: "Use $epub-builder to build and validate the EPUB for this textbook project."

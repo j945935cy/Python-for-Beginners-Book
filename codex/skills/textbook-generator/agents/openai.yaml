@@ -1,0 +1,4 @@
+interface:
+  display_name: "Textbook Generator"
+  short_description: "Draft and check beginner chapters."
+  default_prompt: "Use $textbook-generator to create or revise a beginner textbook chapter."
