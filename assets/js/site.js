@@ -222,7 +222,11 @@ function buildSidebar(toc, article, sidebar) {
     const li = document.createElement("li");
     const link = document.createElement("a");
     
-    if (index >= 7) {
+    const chapterMatch = item.label.match(/^第\s*(\d+)\s*章/);
+    const chapterNumber = chapterMatch ? Number(chapterMatch[1]) : null;
+    const isLocked = chapterNumber !== null && chapterNumber >= 8;
+
+    if (isLocked) {
       link.href = "#";
       link.innerHTML = `🔒 ${escapeHtml(item.label)}`;
       link.style.opacity = "0.7";
