@@ -128,7 +128,7 @@ function ensureLayout(body, titleHeader, toc) {
   for (let i = 0; i < movableNodes.length; i++) {
     if (movableNodes[i].tagName === "H1" && movableNodes[i].id) {
       h1Count++;
-      if (h1Count === 6) { // Chapter 6 cutoff
+      if (h1Count === 8) { // Chapter 8 cutoff
         cutoffIndex = i;
         break;
       }
@@ -146,7 +146,7 @@ function ensureLayout(body, titleHeader, toc) {
     cta.className = "preview-cta";
     cta.innerHTML = `
       <h3 style="margin-top:0; font-size:1.5rem; font-weight:800;">閱讀完整版</h3>
-      <p style="margin-bottom:1.5rem; color:var(--muted); line-height:1.6;">本試閱版僅提供前五章內容。後續章節（迴圈、串列、字典與函式）為完整版專屬內容，歡迎購買完整版電子書繼續學習！</p>
+      <p style="margin-bottom:1.5rem; color:var(--muted); line-height:1.6;">本試閱版提供前七章內容。後續章節（字典與函式）為完整版專屬內容，歡迎購買完整版電子書繼續學習！</p>
       <a href="https://books.google.com.tw/books/about?id=xFfTEQAAQBAJ&redir_esc=y" target="_blank" class="site-btn" style="display:inline-block; padding:0.8rem 1.5rem; background:var(--primary); color:#fff; text-decoration:none; border-radius:99px; font-weight:700;">在 Google Play 圖書購買完整版</a>
     `;
     cta.style.textAlign = "center";
@@ -218,7 +218,7 @@ function buildSidebar(toc, article, sidebar) {
     const li = document.createElement("li");
     const link = document.createElement("a");
     
-    if (index >= 5) {
+    if (index >= 7) {
       link.href = "#";
       link.innerHTML = `🔒 ${escapeHtml(item.label)}`;
       link.style.opacity = "0.7";
